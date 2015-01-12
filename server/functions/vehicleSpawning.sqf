@@ -86,4 +86,4 @@ _carPerMeters = (["A3W_vehicleQuantity", 200] call getPublicVar) / _totalRadius;
 	waitUntil {scriptDone _x};
 } forEach _spawnedVehicles;
 
-diag_log format["WASTELAND - Vehicle spawning completed - %1 Vehicles Spawned",_counter];
+diag_log format["AMENO WASTELAND - Spawn de vehículos completado - %1 vehículos creados",_counter];
