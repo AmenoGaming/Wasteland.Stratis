@@ -11,7 +11,7 @@ private ["_heliChoices", "_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicl
 
 _setupVars =
 {
-	_missionType = "Hostile Helicopers";
+	_missionType = "Helicópteros hostiles";
 	_locationsArray = nil; // locations are generated on the fly from towns
 };
 
@@ -131,7 +131,7 @@ _setupObjects =
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["A formation of armed helicopters containing a <t color='%3'>%1</t> and two <t color='%3'>%2</t> are patrolling the island. Destroy them and recover their cargo!", _vehicleName, _vehicleName2, mainMissionColor];
+	_missionHintText = format ["Una formación de helicópteros armados que contienen un <t color='%3'>%1</t> y dos <t color='%3'>%2</t> están patrullando la isla. Destrúyelos y recupera su carga!", _vehicleName, _vehicleName2, mainMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -160,7 +160,7 @@ _successExec =
 	_box3 setDir random 360;
 	[_box3, "mission_Main_A3snipers"] call fn_refillbox;
 
-	_successHintMessage = "The sky is clear again, the enemy patrol was taken out! Ammo crates have fallen near the wreck.";
+	_successHintMessage = "El cielo ahora está despejado, la patrulla enemiga ha sido eliminada! Han caído varias cajas de armas en el lugar del accidente.";
 };
 
 _this call mainMissionProcessor;
