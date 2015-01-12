@@ -11,7 +11,7 @@ private ["_box1", "_box2", "_boxPos"];
 
 _setupVars =
 {
-	_missionType = "Sunken Supplies";
+	_missionType = "Suministros hundidos";
 	_locationsArray = SunkenMissionMarkers;
 };
 
@@ -36,7 +36,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos] call createSmallDivers;
 
-	_missionHintText = "Sunken supplies have been spotted in the ocean near the marker, and are heavily guarded. Diving gear and an underwater weapon are recommended.";
+	_missionHintText = "Unos suministros hundidos pueden ser capturados en el oceano, cerca del marcador y están muy custiodiados. Es recomendable llevar objetos, traje de buceo y  arma submarina.";
 };
 
 _waitUntilMarkerPos = nil;
@@ -54,7 +54,7 @@ _successExec =
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 
-	_successHintMessage = "The sunken supplies have been collected, well done.";
+	_successHintMessage = "Los suministros hundos han sido recogidos, bien hecho.";
 };
 
 _this call sideMissionProcessor;
