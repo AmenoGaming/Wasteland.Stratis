@@ -1,7 +1,7 @@
 respawn="BASE";
-respawnDelay=15;
+respawnDelay=5;
 disabledAI=1;
-disableChannels[] = {2}; // {0} to disable global, {2} for command channel
+disableChannels[] = {0,1,2,6}; // {0} to disable global, {2} for command channel
 joinUnassigned = 0;
 enableItemsDropping = 0;
 forceRotorLibSimulation = 0; // if you set this to 1, you deny freedom of choice to the players, which is the very principle this mission is built upon
@@ -19,13 +19,13 @@ class Header
 {
 	gameType=Sandbox;
 	minPlayers=1;
-	maxPlayers=145; // 144 players, 1 headless client
+	maxPlayers=64; // 63 players, 1 headless client
 };
-author="AgentRev - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
-onLoadName = "A3Wasteland Stratis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-onLoadMission = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
+author="Creado por AgentRev y modificado por Mick";
+onLoadName = "Ameno Wasteland - Stratis";
+onLoadMission = "Wasteland es un sandbox de supervivencia extrema en el que dos equipos e Independientes luchan por sobrevivir.";
+overviewText = "Wasteland es un sandbox de supervivencia extrema en el que dos equipos e Independientes luchan por sobrevivir.";
+overviewTextLocked = "Wasteland es un sandbox de supervivencia extrema en el que dos equipos e Independientes luchan por sobrevivir.";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
 
