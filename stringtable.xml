@@ -3,114 +3,147 @@
 	<Package name="General">
 		<Key ID="STR_WL_Gen_TeamWEST">
 			<English>BLUFOR</English>
+			<Spanish>BLUFOR</Spanish>
 		</Key>
 		<Key ID="STR_WL_Gen_TeamWEST_2">
 			<English>BLUFOR</English>
+			<Spanish>BLUFOR</Spanish>
 		</Key>
 		<Key ID="STR_WL_Gen_TeamEAST">
 			<English>OPFOR</English>
+			<Spanish>OPFOR</Spanish>
 		</Key>
 		<Key ID="STR_WL_Gen_TeamEAST_2">
 			<English>OPFOR</English>
+			<Spanish>OPFOR</Spanish>
 		</Key>
 		<Key ID="STR_WL_Gen_TeamGUER">
 			<English>Independent</English>
+			<Spanish>Independiente</Spanish>
 		</Key>
 		<Key ID="STR_WL_Gen_TeamGUER_2">
 			<English>Independent</English>
+			<Spanish>Independiente</Spanish>
 		</Key>
 	</Package>
 	<Package name="TeamLock">
 		<Key ID="STR_WL_Punish_Teamkiller">
 			<English>You have been punished for teamkilling twice during this server session. Your inventory has been wiped, and you are now locked to the Independent side.</English>
+			<Spanish>Has sido castigado por asesinar un jugador de tu equipo dos veces. Tu inventario ha sido borrado completamente y ahora perteneces a los Independientes.</Spanish>
 		</Key>
 		<Key ID="STR_WL_Loading_Teamkiller">
 			<English>You are restricted to the Independent side, due to having done 2 or more teamkills during this server session.</English>
+			<Spanish>No puedes cambiar de equipo porque has asesinado a 2 o más jugadores de tu equipo durante esta sesión.</Spanish>
 		</Key>
 		<Key ID="STR_WL_Loading_Teamswitched">
 			<English>You have played as %1 for too long and cannot switch to the other team. You can still play as Independent. (or if online, ask an admin to unlock you)</English>
+			<Spanish>Has jugado como %1 durante mucho tiempo y no puedes cambiar de equipo. Puedes seguir jugando como Independiente o pedir a un admin que te desbloquee si hubiese alguno conectado.</Spanish>
 		</Key>
 	</Package>
 	<Package name="WelcomeMessage">
 		<Key ID="STR_WL_WelcomeToWasteland">
-			<English>&lt;t color='#FF8000' size='2.5' &gt;A3Wasteland Stratis v1.0b &lt;/t&gt;</English>
+			<English>&lt;t color='#FF8000' size='2.5' &gt;Ameno Wasteland - Stratis v0.1 &lt;/t&gt;</English>
+			<Spanish>&lt;t color='#FF8000' size='2.5' &gt;Ameno Wasteland - Stratis v0.1 &lt;/t&gt;</Spanish>
 		</Key>
 		<Key ID="STR_WL_YouAreInTeam">
 			<English>&lt;t color='#FFFFFF' size='1.5' &gt;* You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* Attacking or stealing from other %4 players is &lt;t color="#FF1111"&gt;FORBIDDEN&lt;/t&gt;&lt;br/&gt;* &lt;t color="#FF1111"&gt;NO VOICE IN GLOBAL&lt;/t&gt;&lt;br/&gt;* You can find the Server Rules in the map menu.&lt;br/&gt;* Server restarts are done at the admin's discretion.&lt;br/&gt;* You will be locked to your team after 3 minutes.&lt;/t&gt;</English>
+			<Spanish>&lt;t color='#FFFFFF' size='1.5' &gt;* Estás en el equipo de &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; &lt;br/&gt;* Atacar o robar de otros jugadores %4 está&lt;t color="#FF1111"&gt;PROHIBIDO&lt;/t&gt;&lt;br/&gt;* &lt;t color="#FF1111"&gt;NO USES EL CHAT DE VOZ GLOBAL&lt;/t&gt;&lt;br/&gt;* Puedes encontrar las normas del servidor en el menú correspondiente del mapa.&lt;br/&gt;* El servidor reiniciará a las 12:00, 20:00 y 04:00 o a criterio de los admins.&lt;br/&gt;* Estarás bloqueado en tu equipo actual cuando pasen 3 minutos.&lt;/t&gt;</Spanish>
 		</Key>
 		<Key ID="STR_WL_YouAreInFFA">
 			<English>&lt;t color='#FFFFFF' size='1.5' &gt;* You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* You are &lt;t color="#00aa00"&gt;FREE TO ATTACK ANYONE&lt;/t&gt;&lt;br/&gt;* &lt;t color="#FF1111"&gt;NO VOICE IN GLOBAL&lt;/t&gt;&lt;br/&gt;* You can find the Server Rules in the map menu.&lt;br/&gt;* Server restarts are done at the admin's discretion.&lt;/t&gt;</English>
+			<Spanish>&lt;t color='#FFFFFF' size='1.5' &gt;* Estás en el equipo &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; &lt;br/&gt;* Puedes &lt;t color="#00aa00"&gt;ATACAR A CUALQUIERA&lt;/t&gt;&lt;br/&gt;* &lt;t color="#FF1111"&gt;NO USES EL CHAT DE VOZ GLOBAL&lt;/t&gt;&lt;br/&gt;* Puedes encontrar las normas del servidor en el menú correspondiente del mapa.&lt;br/&gt;* El servidor reiniciará a las 12:00, 20:00 y 04:00 o a criterio de los admins.&lt;/t&gt;</Spanish>
 		</Key>
 		<Key ID="STR_WL_MapMoreInfo">
-			<English>&lt;t color='#FFFFFF' size='1.5' &gt;Report bugs and suggestions at http://forums.a3wasteland.com/ &lt;br/&gt;Server restarts are done at the admin's discretion.&lt;br/&gt;Press the Windows or Home key to toggle player names&lt;br/&gt;For more info please see the map&lt;br/&gt;</English>
+			<English>&lt;t color='#FFFFFF' size='1.5' &gt;Report bugs and suggestions at http://amenogaming.com.com/ or on our Twitter @AmenoGaming &lt;br/&gt;Server restarts are done at the admin's discretion.&lt;br/&gt;Press the Windows or Home key to toggle player names&lt;br/&gt;For more info please see the map&lt;br/&gt;</English>
+			<!-- &lt;br/&gt;&lt;/t&gt;&lt;t size='1.3'&gt;[Update X]&lt;/t&gt;&lt;br/&gt; -->
+			<Spanish>&lt;t color='#FFFFFF' size='1.5' &gt;Puedes informarnos de bugs o escribir sugerencias en http://amenogaming.com.com/ o escribirnos en nuestro Twitter @AmenoGaming &lt;br/&gt;El servidor reiniciará a las 12:00, 20:00 y 04:00 o a criterio de los admins.&lt;br/&gt;Presiona la tecla Windows o la tecla Home para mostrar los nombres de los jugadores u ocultarlos.&lt;br/&gt;Para más información echa un vistazo al mapa&lt;br/&gt;</Spanish>
 			<!-- &lt;br/&gt;&lt;/t&gt;&lt;t size='1.3'&gt;[Update X]&lt;/t&gt;&lt;br/&gt; -->
 		</Key>
 	</Package>
 	<Package name="TeamKillWarningMessage">
 		<Key ID="STR_TK_MESSAGE">
 			<English>&lt;t size='2' color='#ff0000'&gt;Team killing is against the rules!&lt;/t&gt;&lt;br/&gt;If this was a mistake then you must explain yourself and say sorry, otherwise they will mark you as teamkiller and you will get kicked.</English>
+			<Spanish>&lt;t size='2' color='#ff0000'&gt;Asesinar a jugadores de tu equipo va contra las normas.&lt;/t&gt;&lt;br/&gt;Si ha sido simplemente un error, da las explicaciones pertinentes y pide perdón, sino el otro jugador te reportará como asesino de jugadores del mismo equipo y serás kickeado del servidor.</Spanish>
 		</Key>
 	</Package>
 	<Package name="Diary">
 		<Key ID="STR_WL_Diary_RulesContent">
 			<English>&lt;br/&gt;    1. Keep bad language to a minimum. If you have a problem with another player, take it to direct.&lt;br/&gt;    2. NO VOIP IN GLOBAL. Use the channels or Teamspeak!.&lt;br/&gt;    3. Team killing when you are in BLUFOR or OPFOR is forbidden and punishable. Play as Independent if you want to be free for all.&lt;br/&gt;    4. Revealing information about your (ex)team to other teams is lame and not appreciated&lt;br/&gt;    5. Do not exploit R3F or any other add-ons or you will be banned.&lt;br/&gt;    6. Using or spamming with loud\long custom sound commands will cause punishment up to permanent ban</English>
+			<Spanish>&lt;br/&gt;    1. No se toleran insultos. Si tienes algún problema con otro jugador, habla con él o véngate con acciones dentro de la partida.&lt;br/&gt;    2. NO USES EL CHAT DE VOZ GLOBAL. Usa los canales de proximidad o TeamSpeak.&lt;br/&gt;    3. Asesinar jugadores de tu propio equipo cuando estás en los equipos BLUFOR u OPFOR está prohibido y es punible. Juega como Independiente si quieres ser libre de asesinar a todo el mundo.&lt;br/&gt;    4. Revelas información de tu (ex)equipo a otros jugadores es sucio y no demasiado apreciable...&lt;br/&gt;    5. No uses exploits o bugs conocidos para sacar provecho.&lt;br/&gt;    6. Usar o spammear sonoros /largos audios o comandos personalizados es causa de kickeo o baneo, a criterio de los admins..</Spanish>
 		</Key>
 	</Package>
 	<Package name="ShopDescriptions">
 		<Key ID="STR_WL_ShopDescriptions_Water">
 			<English>Greece is a hot place! Drink plenty!</English>
+			<Spanish>Grecia es un sitio caluroso, ¡hidrátate bien!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_Camo">
 			<English>An improvised roof, 4 sticks and a blanket!</English>
+			<Spanish>Un techo improvisado, cuatro palos y una manta!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_CanFood">
 			<English>The Greek wastelands may get you hungry!</English>
+			<Spanish>Los páramos griegos te harán sentir hambriento!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_RepairKit">
 			<English>With this kit, you won't need an engineer!</English>
+			<Spanish>Con este kit no necesitarás un ingeniero!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_MedKit">
 			<English>With this kit, you won't need a medic!</English>
+			<Spanish>Con este kit no necesitarás un médico!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_fuelFull">
 			<English>25 litres of pure unleaded fuel!</English>
+			<Spanish>25 litros de pura gasolina!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_fuelEmpty">
 			<English>Empty fuel can. You can refill it!</English>
+			<Spanish>Garrafa de gasolina vacía. Puedes rellenarla!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_spawnBeacon">
 			<English>Choose your spawn location. Disclaimer: This product does not guarantee safe delivery of goods.</English>
+			<Spanish>Elige tu punto de spawn. Nota: Este producto no garantiza la entrega en condiciones de equipamiento.</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_SyphonHose">
 			<English>Go forth and steal fuel from vehicles!</English>
+			<Spanish>Vé más allá y roba la gasolina de otros vehículos!</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_Energy_Drink">
 			<English>Allows you to sprint continuously for 5 minutes.</English>
+			<Spanish>Te permite correr sin parar durante 5 minutos.</Spanish>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_Warchest">
 			<English>A safe to store your team's money.</English>
+			<Spanish>Una caja fuerte para guardar el dinero de tu equipo.</Spanish>
 		</Key>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">
 			<English>You have been teamkilled by %2 player %1&lt;br/&gt;&lt;br/&gt;If this was an accident, forgive him, otherwise they should explain their actions.&lt;br/&gt;&lt;br/&gt;If the player does not apologize, punish him.</English>
+			<Spanish>Has sido asesinado por un jugador de tu equipo, %2 %1&lt;br/&gt;&lt;br/&gt;Si ha sido un accidente, perdónale, sino tendrá que explicar el motivo.&lt;br/&gt;&lt;br/&gt;Si el jugador no se disculpa, puedes votar para que se le kickee.</Spanish>
 		</Key>
 	</Package>
 	<Package name="Errors">
 		<Key ID="STR_WL_Errors_InProgress">
 			<English>You are already performing another action!</English>
+			<Spanish>Ya estás haciendo otra cosa!</Spanish>
 		</Key>
 		<Key ID="STR_WL_Errors_InVehicle">
 			<English>You are currently busy!</English>
+			<Spanish>Estás ocupado!</Spanish>
 		</Key>
 		<Key ID="STR_WL_Errors_BeaconActive">
 			<English>You already have an active spawn beacon!</English>
+			<Spanish>Ya tienes un beacon desplegado!</Spanish>
 		</Key>
 		<Key ID="STR_WL_Errors_BeaconInVehicle">
 			<English>You cannot enter a vehicle while placing a spawn beacon!</English>
+			<Spanish>No puedes entrar en un vehículo mientras despliegas un beacon!</Spanish>
 		</Key>
 		<Key ID="STR_WL_Errors_BeaconTooMany">
 			<English>You cannot take more spawn beacons!</English>
+			<Spanish>No puedes guardar más beacons!</Spanish>
 		</Key>
 	</Package>
 </Project>
