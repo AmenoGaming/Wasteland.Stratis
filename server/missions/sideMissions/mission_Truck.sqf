@@ -13,7 +13,7 @@ private ["_nbUnits", "_vehicleClass", "_vehicle"];
 
 _setupVars =
 {
-	_missionType = "Supply Truck";
+	_missionType = "Camión de suministros";
 	_locationsArray = MissionSpawnMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -48,7 +48,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "displayName");
 
-	_missionHintText = format ["A <t color='%2'>%1</t> has been immobilized, go get it for your team.", _vehicleName, sideMissionColor];
+	_missionHintText = format ["Un <t color='%2'>%1</t> ha sido inmobilizado, recógelo para tu equipo.", _vehicleName, sideMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -67,7 +67,7 @@ _successExec =
 	_vehicle lock 1;
 	_vehicle setVariable ["R3F_LOG_disabled", false, true];
 
-	_successHintMessage = "The truck has been captured, well done.";
+	_successHintMessage = "El camión ha sido capturado, bien hecho.";
 };
 
 _this call sideMissionProcessor;
