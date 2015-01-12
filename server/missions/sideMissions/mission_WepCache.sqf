@@ -13,7 +13,7 @@ private ["_nbUnits", "_box1", "_box2"];
 
 _setupVars =
 {
-	_missionType = "Aircraft Wreck";
+	_missionType = "Accidente aéreo";
 	_locationsArray = MissionSpawnMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -35,7 +35,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
 
-	_missionHintText = "A weapon cache has been spotted near the marker.";
+	_missionHintText = "Una caja de armas ha sido vista cerca del marcador.";
 };
 
 _waitUntilMarkerPos = nil;
@@ -53,7 +53,7 @@ _successExec =
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	_successHintMessage = "Los suministros del accidente aéreo han sido recogidos, bien hecho.";
 };
 
 _this call sideMissionProcessor;
