@@ -36,7 +36,7 @@ if (!isDedicated) then
 {
 	[] spawn
 	{
-		9999 cutText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
+		9999 cutText ["Bienvenido a Ameno Wasteland - Stratis. Por favor, espera a que el cliente arranque por completo", "BLACK", 0.01];
 
 		waitUntil {!isNull player};
 		removeAllWeapons player;
@@ -53,7 +53,7 @@ if (!isDedicated) then
 if (isServer) then
 {
 	diag_log format ["############################# %1 #############################", missionName];
-	diag_log "WASTELAND SERVER - Initializing Server";
+	diag_log "AMENO WASTELAND STRATIS - Iniciando ahora el servidor";
 	[] execVM "server\init.sqf";
 };
 
