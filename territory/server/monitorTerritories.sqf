@@ -119,7 +119,7 @@ _onCaptureStarted =
 	{
 		_sideObject = [_ownerTeam] call _sideObjectForSideStr;
 		_descriptiveTeamName = [_ownerTeam] call _getTeamName;
-		_msg = format["Your territory at %1 is being captured by %2!", _territoryDescriptiveName, _descriptiveTeamName];
+		_msg = format["Tu territorio %1 esta siendo capturad por %2!", _territoryDescriptiveName, _descriptiveTeamName];
 		[[_msg], "A3W_fnc_territoryActivityHandler", _sideObject, false] call A3W_fnc_MP;
 	};
 	*/
@@ -167,10 +167,10 @@ _onCaptureFinished =
 	["pvar_updateTerritoryMarkers", [_captureTeam, [[_captureName], false, _captureTeam, true]]] call fn_publicVariableAll;
 	["pvar_updateTerritoryMarkers", [_otherTeams, [[_captureName], false, _captureTeam, false]]] call fn_publicVariableAll;
 
-	_msgWinners = format ["Your team has successfully captured %1 and you've received $%2", _captureDescription, _captureValue];
+	_msgWinners = format ["Tu equipo ha capturado %1 con exito y has recibido $%2", _captureDescription, _captureValue];
 	["pvar_territoryActivityHandler", [_captureTeam, [_msgWinners, _captureValue]]] call fn_publicVariableAll;
 
-	_msgOthers = format ["%1 has captured %2", _descriptiveTeamName, _captureDescription];
+	_msgOthers = format ["%1 ha capturado %2", _descriptiveTeamName, _captureDescription];
 	["pvar_territoryActivityHandler", [_otherTeams, [_msgOthers]]] call fn_publicVariableAll;
 };
 
