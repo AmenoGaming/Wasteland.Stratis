@@ -13,7 +13,7 @@ private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles",
 
 _setupVars =
 {
-	_missionType = "Armed Convoy";
+	_missionType = "Convoy armado";
 	_locationsArray = LandConvoyPaths;
 };
 
@@ -112,7 +112,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh2 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["A <t color='%2'>%1</t> transporting 2 weapon crates is being escorted by armed vehicles. Stop them!", _vehicleName, mainMissionColor];
+	_missionHintText = format ["Un <t color='%2'>%1</t> transportando dos cajas de armas está siendo escoltado por vehículos armados. Detenlos!", _vehicleName, mainMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -137,7 +137,7 @@ _successExec =
 	_box2 setDir random 360;
 	[_box2, "mission_USLaunchers"] call fn_refillbox;
 
-	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
+	_successHintMessage = "El convoy ha sido detenido, ahora puedes recoger las cajas de armas y vehículos.";
 };
 
 _this call mainMissionProcessor;
