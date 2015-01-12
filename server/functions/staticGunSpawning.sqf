@@ -20,4 +20,4 @@ for "_i" from 1 to 770 step 20 do
 	_counter = _counter + 1;
 };
 
-diag_log format["WASTELAND SERVER - %1 Static Guns Spawned",_counter];
+diag_log format["AMENO WASTELAND - %1 armas estáticas creadas",_counter];
