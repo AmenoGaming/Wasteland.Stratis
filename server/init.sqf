@@ -41,7 +41,7 @@ if (loadFile (externalConfigFolder + "\serverRules.sqf") != "") then
 	[[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"], "BIS_fnc_execVM", true, true] call A3W_fnc_MP;
 };
 
-diag_log "WASTELAND SERVER - Server Compile Finished";
+diag_log "WASTELAND SERVER - Compilación del servidor finalizada";
 
 // load default config
 call compile preprocessFileLineNumbers "server\default_config.sqf";
@@ -54,7 +54,7 @@ if (loadFile (externalConfigFolder + "\main_config.sqf") != "") then
 else
 {
 	diag_log format["[WARNING] A3W configuration file '%1\main_config.sqf' was not found. Using default settings!", externalConfigFolder];
-	diag_log "[WARNING] For more information go to http://forums.a3wasteland.com/";
+	diag_log "[WARNING] For more information go to http://amenogaming.com/";
 };
 
 // compileFinal & broadcast client config variables
@@ -159,7 +159,7 @@ if (_playerSavingOn || _serverSavingOn) then
 	};
 
 	{
-		diag_log format ["[INFO] A3W %1 = %2", _x select 0, if (_x select 1) then { "ON" } else { "OFF" }];
+		diag_log format ["[INFO] Ameno Wasteland %1 = %2", _x select 0, if (_x select 1) then { "ON" } else { "OFF" }];
 	}
 	forEach
 	[
@@ -195,7 +195,7 @@ if (!isNil "A3W_startHour" || !isNil "A3W_moonLight") then
 
 if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn || {["A3W_buildingLootSupplies"] call isConfigOn}}) || {["A3W_buildingLoot"] call isConfigOn}) then
 {
-	diag_log "[INFO] A3W loot spawning is ENABLED";
+	diag_log "[INFO] Ameno Wasteland Stratis loot spawn HABILITADO";
 	execVM "addons\Lootspawner\Lootspawner.sqf";
 };
 
@@ -203,7 +203,7 @@ if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn ||
 
 if (["A3W_serverSpawning"] call isConfigOn) then
 {
-	diag_log "WASTELAND SERVER - Initializing Server Spawning";
+	diag_log "WASTELAND SERVER - Iniciando el spawn en el servidor...";
 
 	if (["A3W_heliSpawning"] call isConfigOn) then
 	{
@@ -240,12 +240,12 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 
 if (count (["config_territory_markers", []] call getPublicVar) > 0) then
 {
-	diag_log "[INFO] A3W territory capturing is ENABLED";
+	diag_log "[INFO] Ameno Wasteland Stratis - Capturar territorios está HABILITADO";
 	[] execVM "territory\server\monitorTerritories.sqf";
 }
 else
 {
-	diag_log "[INFO] A3W territory capturing is DISABLED";
+	diag_log "[INFO] Ameno Wasteland Stratis - Capturar territorios está DESHABILITADO";
 };
 
 // Consolidate all store NPCs in a single group
@@ -263,7 +263,7 @@ else
 //Execute Server Missions.
 if (["A3W_serverMissions"] call isConfigOn) then
 {
-	diag_log "WASTELAND SERVER - Initializing Missions";
+	diag_log "WASTELAND SERVER - Iniciando misiones...";
 	[] execVM "server\missions\masterController.sqf";
 };
 
