@@ -30,7 +30,7 @@ _count = 0;
 	};
 } forEach allMapMarkers;
 
-diag_log format["WASTELAND SERVER - %1 Static helis Spawned",_count];
+diag_log format["AMENO WASTELAND - %1 helis estáticos creados",_count];
 
 /*
 {diag_log format["Heli %1 = %2",_forEachIndex, _x];} forEach currentStaticHelis;
