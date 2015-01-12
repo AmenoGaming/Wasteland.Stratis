@@ -24,7 +24,7 @@ _setupVars =
 	[
 		// Easy
 		[
-			"Small Money Shipment", // Marker text
+			"Envío pequeño de dinero", // Marker text
 			25000, // Money
 			[
 				[ // NATO convoy
@@ -43,7 +43,7 @@ _setupVars =
 		],
 		// Medium
 		[
-			"Medium Money Shipment", // Marker text
+			"Envío medio de dinero", // Marker text
 			50000, // Money
 			[
 				[ // NATO convoy
@@ -65,7 +65,7 @@ _setupVars =
 		],
 		// Hard
 		[
-			"Large Money Shipment", // Marker text
+			"Envío grande de dinero", // Marker text
 			75000, // Money
 			[
 				[ // NATO convoy
@@ -87,7 +87,7 @@ _setupVars =
 		],
 		// Extreme
 		[
-			"Heavy Money Shipment", // Marker text
+			"Envío enorme de dinero", // Marker text
 			100000, // Money
 			[
 				[ // NATO convoy
@@ -207,7 +207,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh2 >> "picture");
 	_vehicleName = getText (configFile >> "cfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["A convoy transporting <t color='%1'>%2</t> escorted by a <t color='%1'>%3</t> is en route to an unknown location.<br/>Stop them!", moneyMissionColor, _moneyText, _vehicleName];
+	_missionHintText = format ["Un convoy transportando <t color='%1'>%2</t> está siendo escoltado por un <t color='%1'>%3</t>  y va en ruta hacia una localización desconocida.<br/>Detenlos!", moneyMissionColor, _moneyText, _vehicleName];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -233,7 +233,7 @@ _successExec =
 		_cash setVariable ["owner", "world", true];
 	};
 
-	_successHintMessage = "The convoy has been stopped, the money and vehicles are now yours to take.";
+	_successHintMessage = "El convoy ha sido detenido, ahora puedes recoger el dinero y los vehículos.";
 };
 
 _this call moneyMissionProcessor;
