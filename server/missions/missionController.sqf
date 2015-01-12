@@ -17,7 +17,7 @@ if (_controllerNum > 1) then
 	_controllerSuffix = format [" %1", _controllerNum];
 };
 
-diag_log format ["WASTELAND SERVER - Started %1 Mission%2 Controller", MISSION_CTRL_TYPE_NAME, _controllerSuffix];
+diag_log format ["AMENO GAMING - Comenzada %1 mision%2 controlador", MISSION_CTRL_TYPE_NAME, _controllerSuffix];
 
 _missionsFolder = MISSION_CTRL_FOLDER;
 [MISSION_CTRL_PVAR_LIST, MISSION_CTRL_FOLDER] call attemptCompileMissions;
@@ -46,7 +46,7 @@ while {true} do
 
 	[MISSION_CTRL_PVAR_LIST, _nextMission, true] call setMissionState;
 
-	diag_log format ["WASTELAND SERVER - %1 Mission%2 waiting to run: %3", MISSION_CTRL_TYPE_NAME, _controllerSuffix, _nextMission];
+	diag_log format ["AMENO WASTELAND - %1 Mision%2 esperando para comenzar: %3", MISSION_CTRL_TYPE_NAME, _controllerSuffix, _nextMission];
 
 	[
 		parseText format
