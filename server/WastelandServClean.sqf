@@ -96,5 +96,5 @@ while {true} do
 		sleep 0.01;
 	} forEach allGroups;
 
-	diag_log format ["SERVER CLEANUP: Deleted %1 empty groups", _delQtyG];
+	diag_log format ["LIMPIEZA DE SERVIDOR: Eliminados %1 grupos vacios", _delQtyG];
 };
