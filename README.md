@@ -1,17 +1,14 @@
-*Wasteland.Stratis* by Team Wasteland!
+*Wasteland.Stratis* Team Wasteland and modified by Mick for Ameno Gaming!
 ===================
 
-ArmA 3 Wasteland is a harsh survival sandbox mission where 2 teams and independent players fight for survival.
+ArmA 3 Wasteland es un sandbox de supervivencia extrema en el que dos equipos e Independientes luchan por sobrevivir.
+
+Recuerda que esta misión no está completa, es una de nuestras primeras versiones así que puede contener bugs :)
 
 
-The mission is not ready yet, so for now it's just a placeholder :)
+       *Ameno Gaming* somos:
 
-
-*Team Wasteland* collaborators:
-
-       GoT - JoSchaap
-       TPG - AgentRev
-           - MercyfulFate
-       KoS - His_Shadow
-       KoS - Bewilderbeest
-       404 - Del1te
+       Rubi - Rubillom
+       Mick - Señor Patatuela
+       Saultpta - Saultpta
+       Charlie - Charlie
