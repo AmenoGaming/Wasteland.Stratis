@@ -14,7 +14,7 @@ private ["_vehChoices", "_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle
 
 _setupVars =
 {
-	_missionType = "Coastal Patrol";
+	_missionType = "Patrulla costera";
 	_locationsArray = CoastalConvoyPaths;
 };
 
@@ -149,7 +149,7 @@ _setupObjects =
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["Two <t color='%3'>%1</t> are patrolling the coasts, escorted by a <t color='%3'>%2</t>.<br/>Intercept them and recover their cargo!", _vehicleName, _vehicleName2, mainMissionColor];
+	_missionHintText = format ["Dos <t color='%3'>patrulleras</t> están merodeando por las costas, escoltadas por un <t color='%3'>%2</t>.<br/>Intercéptalas y recupera su carga!", _vehicleName, _vehicleName2, mainMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -178,7 +178,7 @@ _successExec =
 	_box3 setDir random 360;
 	[_box3, "mission_Main_A3snipers"] call fn_refillbox;
 
-	_successHintMessage = "The patrol has been stopped, the ammo crates are yours to take. Find them near the wreck!";
+	_successHintMessage = "Las patrulleras han sido detenidas, ahora puedes recoger las cajas de armas!";
 };
 
 _this call mainMissionProcessor;
