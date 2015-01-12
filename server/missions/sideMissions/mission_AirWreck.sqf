@@ -13,7 +13,7 @@ private ["_nbUnits", "_wreckPos", "_wreck", "_box1", "_box2"];
 
 _setupVars =
 {
-	_missionType = "Aircraft Wreck";
+	_missionType = "Accidente aéreo";
 	_locationsArray = MissionSpawnMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -59,7 +59,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	deleteVehicle _wreck;
 
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	_successHintMessage = "Los suministros del accidente aéreo han sido recogidos, bien hecho.";
 };
 
 _this call sideMissionProcessor;
