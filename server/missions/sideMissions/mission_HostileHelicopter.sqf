@@ -11,7 +11,7 @@ private ["_vehicleClass", "_vehicle", "_createVehicle", "_vehicles", "_leader", 
 
 _setupVars =
 {
-	_missionType = "Hostile Helicoper";
+	_missionType = "Helicóptero enemigo";
 	_locationsArray = nil; // locations are generated on the fly from towns
 };
 
@@ -114,7 +114,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "displayName");
 
-	_missionHintText = format ["An armed <t color='%2'>%1</t> is patrolling the island. Intercept it and recover its cargo!", _vehicleName, sideMissionColor];
+	_missionHintText = format ["Un <t color='%2'>%1</t> está patrullando la isla. Intercéptalo y recupera su carga!", _vehicleName, sideMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -139,7 +139,7 @@ _successExec =
 	_box2 setDir random 360;
 	[_box2, "mission_USLaunchers"] call fn_refillbox;
 
-	_successHintMessage = "The sky is clear again, the enemy patrol was taken out! Ammo crates have fallen near the wreck.";
+	_successHintMessage = "El cielo está despejado de nuevo, la patrulla enemiga ha sido derribada! Unas cajas de armas han caido cerca del impacto.";
 };
 
 _this call sideMissionProcessor;
