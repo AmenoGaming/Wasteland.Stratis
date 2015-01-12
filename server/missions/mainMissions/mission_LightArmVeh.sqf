@@ -23,7 +23,7 @@ _setupVars =
 		"I_MRAP_03_gmg_F"
 	] call BIS_fnc_selectRandom;
 
-	_missionType = "Light Armed Vehicle";
+	_missionType = "Vehículo armado ligero";
 	_locationsArray = MissionSpawnMarkers;
 
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
