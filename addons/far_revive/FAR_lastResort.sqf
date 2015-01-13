@@ -42,6 +42,6 @@ if !(player getVariable ["performingDuty", false]) then
 	}
 	else
 	{
-		titleText ["Get an explosive charge next time, my child.", "PLAIN", 0.5];
+		titleText ["Hazte con una carga explosiva para otra vez, hijo mio.", "PLAIN", 0.5];
 	};
 };
