@@ -10,9 +10,9 @@
 
 #define DURATION 5
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Filling Jerrycan Failed! You can't do that while in a vehicle"
-#define ERR_TOO_FAR_AWAY "Filling Jerrycan Failed! You moved to far away"
-#define ERR_CANCELLED "Filling Jerrycan Cancelled!"
+#define ERR_IN_VEHICLE "Error al rellenar el bidón de gasolina! No puedes hacer esto mientras te encuentras en el vehículo"
+#define ERR_TOO_FAR_AWAY "Error al rellenar el bidón de gasolina! Te moviste demasiado lejos"
+#define ERR_CANCELLED "Llenado de bidón de gasolina cancelado!"
 
 private ["_container", "_error"];
 _container = call mf_jerrycan_nearest_pump;
@@ -33,7 +33,7 @@ _checks = {
 		case (player distance _container > 5): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
-			_text = format["Refilling Jerrycan %1%2 Complete", round(100 * _progress), "%"];
+			_text = format["Llenado del Bidón de Gasolina %1%2 Completado", round(100 * _progress), "%"];
 			_failed = false;
 		};
 	};
