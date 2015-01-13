@@ -12,13 +12,13 @@ disableSerialization;
 
 // Check if mutex lock is active.
 if(mutexScriptInProgress) exitWith {
-	player globalChat "You are already performing another action!";
+	player globalChat "Ya estás realizando una acción!";
 };
 
 private["_money","_pos","_cash"];
 _money = parsenumber(GET_SELECTED_DATA(money_value));
 
-if((player getVariable "cmoney" < _money) OR (player getVariable "cmoney" < 0)) exitwith {hint format["You don't have $%1 to drop", [_money] call fn_numbersText];};
+if((player getVariable "cmoney" < _money) OR (player getVariable "cmoney" < 0)) exitwith {hint format["No tienes $%1 para tirar", [_money] call fn_numbersText];};
 
 mutexScriptInProgress = true;
 player playMove ([player, "AmovMstpDnon_AinvMstpDnon", "putdown"] call getFullMove);
