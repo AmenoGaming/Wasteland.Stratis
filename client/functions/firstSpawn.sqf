@@ -63,7 +63,7 @@ player addEventHandler ["WeaponDisassembled",
 
 		_currBag = unitBackpack _unit;
 
-		titleText ['You are not allowed to disassemble static weapons.\nUse the "Move" option instead.', "PLAIN DOWN"];
+		titleText ['No se te permite desmontar armas estáticas.\nUtiliza la opción "Mover"', "PLAIN DOWN"];
 
 		_this spawn
 		{
@@ -175,7 +175,7 @@ if (["A3W_combatAbortDelay", 0] call getPublicVar > 0) then
 						deleteVehicle _bomb;
 						player addMagazine _mag;
 						playSound "FD_CP_Not_Clear_F";
-						titleText [format ["You are not allowed to place remote explosives within %1m of a store.\nThe explosive has been re-added to your inventory.", _minDist], "PLAIN DOWN", 0.5];
+						titleText [format ["No se permite colocar explosivos a %1m de una tienda.\nEl explosivo ha sido devuelto a tu inventario.", _minDist], "PLAIN DOWN", 0.5];
 					};
 				} forEach entities "CAManBase";
 			};
@@ -215,5 +215,5 @@ if (playerSide in [BLUFOR,OPFOR] && {{_x select 0 == _uid} count pvar_teamSwitch
 		case OPFOR:  { "OPFOR" };
 	};
 
-	titleText [format ["You have been locked to %1", _side], "PLAIN", 0.5];
+	titleText [format ["Has sido bloqueado en %1", _side], "PLAIN", 0.5];
 };
