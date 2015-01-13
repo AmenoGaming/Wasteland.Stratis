@@ -28,7 +28,7 @@ class GroupManagement {
 
 		class MainTitle : w_RscText {
 			idc = -1;
-			text = "Group Management";
+			text = "Gestión de grupo";
 			sizeEx = 0.04;
 			shadow = 2;
 			x = 0.260; y = 0.112;
@@ -37,7 +37,7 @@ class GroupManagement {
 
 		class InviteTitleText : w_RscText {
 			idc = -1;
-			text = "Players";
+			text = "Jugadores";
 			sizeEx = 0.025;
 			shadow = 2;
 			x = 0.0875; y = 0.155;
@@ -46,7 +46,7 @@ class GroupManagement {
 
 		class GroupTitleText : w_RscText {
 			idc = -1;
-			text = "Your Group";
+			text = "Tu grupo";
 			sizeEx = 0.025;
 			shadow = 2;
 			x = 0.5575; y = 0.155;
@@ -70,7 +70,7 @@ class GroupManagement {
 
 		class CloseButton : w_RscButton {
 			idc = -1;
-			text = "Close";
+			text = "Cerrar";
 			onButtonClick = "closeDialog 0;";
 			x = 0.02; y = 0.68;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -88,7 +88,7 @@ class GroupManagement {
 
 		class PromotePlayerButton : w_RscButton {
 			idc = groupManagementPromoteButton;
-			text = "Promote";
+			text = "Pasar liderazgo";
 			onButtonClick = "[] execVM 'client\systems\groups\promotePlayer.sqf'";
 			x = 0.3075; y = 0.200;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -97,7 +97,7 @@ class GroupManagement {
 
 		class InviteButton : w_RscButton {
 			idc = groupManagementInviteButton;
-			text = "Invite";
+			text = "Invitar";
 			onButtonClick = "[] execVM 'client\systems\groups\inviteToGroup.sqf'";
 			x = 0.3075; y = 0.250;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -106,7 +106,7 @@ class GroupManagement {
 
 		class KickButton : w_RscButton {
 			idc = groupManagementKickButton;
-			text = "Kick";
+			text = "Echar";
 			onButtonClick = "[] execVM 'client\systems\groups\kickFromGroup.sqf'";
 			x = 0.3075; y = 0.300;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -115,7 +115,7 @@ class GroupManagement {
 
 		class DisbandButton : w_RscButton {
 			idc = groupManagementDisbandButton;
-			text = "Disband";
+			text = "Borrar grupo";
 			onButtonClick = "[] execVM 'client\systems\groups\disbandGroup.sqf'";
 			x = 0.3075; y = 0.350;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -124,7 +124,7 @@ class GroupManagement {
 
 		class LeaveButton : w_RscButton {
 			idc = groupManagementLeaveButton;
-			text = "Leave Group";
+			text = "Dejar grupo";
 			onButtonClick = "[] execVM 'client\systems\groups\leaveGroup.sqf'";
 			x = 0.3075; y = 0.350;
 			w = 0.125; h = 0.033 * safezoneH;
