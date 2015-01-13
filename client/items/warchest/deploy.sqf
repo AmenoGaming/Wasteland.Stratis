@@ -3,10 +3,10 @@
 // ******************************************************************************************
 #define DURATION MF_ITEMS_WARCHEST_DEPLOY_DURATION
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Deploying Warchest Failed! You can't do that in a vehicle."
-#define ERR_CANCELLED "Deploying Warchest Cancelled!"
-#define ERR_TOO_FAR_AWAY "Deploying Warchest Failed! You are too far way."
-#define ERR_NOT_EAST_WEST "Deploying Warchest Failed! Independants don't have access to warchests yet."
+#define ERR_IN_VEHICLE "Fallo al desplegar la caja! No puedes hacer eso desde un vehículo."
+#define ERR_CANCELLED "Cancelado el despliegue de caja!"
+#define ERR_TOO_FAR_AWAY "Fallo al desplegar la caja! Estás demasiado lejos."
+#define ERR_NOT_EAST_WEST "Fallo al desplegar la caja! Los Independientes no tienen acceso a estas cajas todavía."
 
 private "_checks";
 _checks = {
@@ -22,7 +22,7 @@ _checks = {
 		case (player distance _position > 3): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
-			_text = format["Warchest %1%2 Deployed", round(100 * _progress), "%"];
+			_text = format["Caja %1%2 desplegada", round(100 * _progress), "%"];
 			_failed = false;
 		};
 	};
