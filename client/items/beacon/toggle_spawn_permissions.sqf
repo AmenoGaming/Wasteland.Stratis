@@ -12,10 +12,10 @@
 #include "mutex.sqf"
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define DURATION 5
-#define ERR_CANCELLED "Changing spawn permissions cancelled"
-#define ERR_TOO_FAR_AWAY "Changing spawn permissions failed as you moved too far away!"
-#define ERR_SOMEONE_ELSE_TAKEN "Changing spawn permissions failed, as someone else finished packing it up before you!"
-#define ERR_NO_GROUP "You must be in a group to enable group spawn restrictions"
+#define ERR_CANCELLED "Cambio de permisos de spawn cancelado"
+#define ERR_TOO_FAR_AWAY "Cambio de permisos de spawn fallido porque estás lejos!"
+#define ERR_SOMEONE_ELSE_TAKEN "Cambio de permisos de spawn fallido, alguien se te ha adelantado"
+#define ERR_NO_GROUP "Debes estar en un grupo para activar las restricciones del spawn para grupos"
 
 private ["_beacon", "_error", "_hasFailed", "_success"];
 _beacon = [] call mf_items_spawn_beacon_nearest;
