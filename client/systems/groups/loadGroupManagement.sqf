@@ -97,7 +97,7 @@ while{groupManagmentActive} do
 		if (isStreamFriendlyUIEnabled) then {
 			_name = "Censored(StreamFriendly:ON)";
 		};
-		_groupInviteText ctrlSetStructuredText parseText (format ["Group Invite From<br/>%1",_name]);
+		_groupInviteText ctrlSetStructuredText parseText (format ["Invitación de grupo de<br/>%1",_name]);
 	} else {
 		_groupAcceptInvite ctrlShow false;
 		_groupDeclineInvite ctrlShow false;
