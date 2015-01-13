@@ -38,7 +38,7 @@ if !(playerSide in [BLUFOR,OPFOR]) then
 		if (isPlayer _x && alive _x && group _x != group player) exitWith 
 		{
 			moveOut player;
-			["You can't enter vehicles being used by enemy groups.", 5] call mf_notify_client;
+			["No puedes entrar en un vehiculo con enemigos dentro.", 5] call mf_notify_client;
 		};
 	} forEach crew _veh;
 };
