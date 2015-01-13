@@ -37,21 +37,21 @@ if (hasInterface) then
 	{
 		case (["GenStore", _npcName] call _startsWith):
 		{
-			_npc addAction ["<img image='client\icons\store.paa'/> Open General Store", "client\systems\generalStore\loadGenStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
+			_npc addAction ["<img image='client\icons\store.paa'/> Abrir Tienda General", "client\systems\generalStore\loadGenStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
 		};
 		case (["GunStore", _npcName] call _startsWith):
 		{
-			_npc addAction ["<img image='client\icons\store.paa'/> Open Gun Store", "client\systems\gunStore\loadgunStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
+			_npc addAction ["<img image='client\icons\store.paa'/> Abrir Armeria", "client\systems\gunStore\loadgunStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
 		};
 		case (["VehStore", _npcName] call _startsWith):
 		{
-			_npc addAction ["<img image='client\icons\store.paa'/> Open Vehicle Store", "client\systems\vehicleStore\loadVehicleStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
+			_npc addAction ["<img image='client\icons\store.paa'/> Abrir Tienda de Vehiculos", "client\systems\vehicleStore\loadVehicleStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
 		};
 	};
 
-	_npc addAction ["<img image='client\icons\money.paa'/> Sell crate", "client\systems\selling\sellCrateItems.sqf", [false, false, true], 0.99, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_CRATE_CONDITION];
-	_npc addAction ["<img image='client\icons\money.paa'/> Sell contents", "client\systems\selling\sellCrateItems.sqf", [], 0.98, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_CONTENTS_CONDITION];
-	_npc addAction ["<img image='client\icons\money.paa'/> Sell last vehicle contents", "client\systems\selling\sellVehicleItems.sqf", [], 0.97, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+	_npc addAction ["<img image='client\icons\money.paa'/> Vender caja", "client\systems\selling\sellCrateItems.sqf", [false, false, true], 0.99, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_CRATE_CONDITION];
+	_npc addAction ["<img image='client\icons\money.paa'/> Vender contenido de la caja", "client\systems\selling\sellCrateItems.sqf", [], 0.98, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_CONTENTS_CONDITION];
+	_npc addAction ["<img image='client\icons\money.paa'/> Vender el contenido de tu vehiculo", "client\systems\selling\sellVehicleItems.sqf", [], 0.97, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
 };
 
 if (isServer) then
@@ -147,7 +147,7 @@ if (isServer) then
 					{
 						if (_classname != "") then
 						{
-							diag_log format ["Applying %1 as weapon for %2", _classname, _npcName];
+							diag_log format ["Aplicando %1 como arma para %2", _classname, _npcName];
 							_npc addWeapon _classname;
 						};
 					};
@@ -155,7 +155,7 @@ if (isServer) then
 					{
 						if (_classname != "") then
 						{
-							diag_log format ["Applying %1 as uniform for %2", _classname, _npcName];
+							diag_log format ["Aplicando %1 como uniforme para %2", _classname, _npcName];
 							_npc addUniform _classname;
 						};
 					};
@@ -163,7 +163,7 @@ if (isServer) then
 					{
 						if (_classname != "") then
 						{
-							diag_log format ["Applying %1 as switchMove for %2", _classname, _npcName];
+							diag_log format ["Aplicando %1 como switchMove para %2", _classname, _npcName];
 							_npc switchMove _classname;
 						};
 					};
@@ -284,7 +284,7 @@ if (hasInterface) then
 		};
 
 		_sellBox setDir (getDir _desk + 90);
-		_sellBox addAction ["<img image='client\icons\money.paa'/> Sell bin contents", "client\systems\selling\sellCrateItems.sqf", [true], 1, false, false, "", STORE_ACTION_CONDITION + " && " + SELL_BIN_CONDITION];
+		_sellBox addAction ["<img image='client\icons\money.paa'/> Vender contenido de la caja", "client\systems\selling\sellCrateItems.sqf", [true], 1, false, false, "", STORE_ACTION_CONDITION + " && " + SELL_BIN_CONDITION];
 
 		_sellBox spawn
 		{
