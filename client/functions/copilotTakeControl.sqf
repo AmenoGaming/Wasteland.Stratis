@@ -18,5 +18,5 @@ _unit action ["EngineOn", _veh];
 
 if (_unit == player) then
 {
-	titleText ["You have been given control of the aircraft", "PLAIN DOWN", 0.5];
+	titleText ["El piloto te ha dado el control de los mandos", "PLAIN DOWN", 0.5];
 };
