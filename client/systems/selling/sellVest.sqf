@@ -82,7 +82,7 @@ storeSellingHandle = _this spawn
 		else
 		{
 			playSound "FD_CP_Not_Clear_F";
-			[format ['El contenido de "%1" ha cambiado, por favor vuelve a empezar el proceso de compra.', _objName], "Error"] call BIS_fnc_guiMessage;
+			[format ['El contenido de "%1" ha cambiado, por favor vuelve a empezar el proceso de venta.', _objName], "Error"] call BIS_fnc_guiMessage;
 		};
 	};
 };
