@@ -40,7 +40,7 @@ class ServerAdminMenu
 		class ServerAdminMenu_Title:w_RscText
 		{
 			idc=-1;
-			text="Admin Menu";
+			text="Menú de admin";
 			x=0.29;
 			y=0.108;
 			w=0.088;
@@ -62,7 +62,7 @@ class ServerAdminMenu
 		class ServerAdminMenu_activate:w_RscButton
 		{
 			idc=-1;
-			text="Select";
+			text="Seleccionar";
 			onButtonClick = "[1] execVM 'client\systems\adminPanel\optionSelect.sqf'";
 			x=0.345;
 			y=0.70;
