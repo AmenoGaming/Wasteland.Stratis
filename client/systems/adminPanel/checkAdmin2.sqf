@@ -12,5 +12,5 @@ _isAdmin = serverCommandAvailable "#kick";
 if (_isAdmin) then {
 	_uid = getPlayerUID player;
 	serverAdministrators set [count serverAdministrators, _uid];
-	player sideChat "Ahora eres administrador, vuelve a abrir el menú"";
+	player sideChat "Ahora eres administrador, vuelve a abrir el menú";
 };
