@@ -1079,7 +1079,7 @@ class tw_RscButtonMenuCancel
 	{
 		"0x00050000 + 1"
 	};
-	text = "Cancel";
+	text = "Cancelar";
 };
 class tw_RscControlsGroup
 {
@@ -1165,7 +1165,7 @@ class ObjectSearch
 		class ObjectSearchTitleBar: tw_RscText
 		{
 			idc = -1;
-			text = "Team Wasteland ObjectFinder";
+			text = "Team Ameno ObjectFinder";
 			x = 0.1;
 			y = 0.08;
 			w = 0.8;
