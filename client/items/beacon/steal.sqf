@@ -9,11 +9,11 @@
 //@file Argument: [player, player, _action, []] the standard "called by an action" values
 
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Stealing Spawn Beacon Failed! You can't do this in a vehicle"
-#define ERR_NOT_OPP_SIDE "Stealing Spawn Beacon Failed! Someone else finished stealing it first."
-#define ERR_TOO_FAR_AWAY "Stealing Spawn Beacon Failed! You are too far away to do that."
-#define ERR_CANCELLED "Stealing Spawn Beacon Cancelled"
-#define ERR_SOMEONE_ELSE_TAKEN "Packing Spawn Beacon Failed! Someone else finished packing it up before you"
+#define ERR_IN_VEHICLE "Intento de robo del Spawn Beacon Fallido! No puedes hacer esto en un vehículo"
+#define ERR_NOT_OPP_SIDE "Intento de robo del Spawn Beacon Fallido! Alguien terminó de robar en primer lugar."
+#define ERR_TOO_FAR_AWAY "Intento de robo del Spawn Beacon Fallido! Te encuentras demasiado lejos para hacerlo."
+#define ERR_CANCELLED "Intento de robo del Spawn Beacon Cancelado"
+#define ERR_SOMEONE_ELSE_TAKEN "Recogida del Spawn Beacon Fallido! Alguien ha finalizado la recogida antes que tú"
 private ["_beacon", "_error", "_isIndie", "_ownerSide", "_ownerUID", "_hasFailed", "_success"];
 _beacon = [] call mf_items_spawn_beacon_nearest;
 _error = [_beacon] call mf_items_spawn_beacon_can_steal;
