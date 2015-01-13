@@ -48,5 +48,5 @@ MUTEX_UNLOCK;
 if (_success) then {
 	deleteVehicle _netting;
 	[MF_ITEMS_CAMO_NET, 1] call mf_inventory_add;
-	["You successfully packed the Camouflage Netting", 5] call mf_notify_client;
+	["Has recogido la red de camuflaje", 5] call mf_notify_client;
 };
