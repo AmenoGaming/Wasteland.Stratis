@@ -33,19 +33,19 @@ if (_success) then
 	{
 		if (["A3W_unlimitedStamina"] call isConfigOn) then
 		{
-			["The energy drink had no effect on your superhuman stamina.", 5] call mf_notify_client;
+			["La bebida energética no tuvo efecto en tu resistencia superhumana.", 5] call mf_notify_client;
 		}
 		else
 		{
 			player enableFatigue false;
 			player setVariable ["energy_drink_active", true];
-			["You have unlimited stamina for 5 minutes", 5] call mf_notify_client;
+			["Tienes 5 minutos de resistencia ilimitada", 5] call mf_notify_client;
 
 			sleep (5*60);
 
 			player enableFatigue true;
 			player setVariable ["energy_drink_active", false];
-			["The effects of the energy drink are wearing off", 5] call mf_notify_client;
+			["Los efectos de la bebida energética están desapareciendo", 5] call mf_notify_client;
 		};
 	};
 };
