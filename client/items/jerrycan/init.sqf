@@ -71,9 +71,9 @@ mf_remote_syphon = {
 } call mf_compile;
 
 
-[MF_ITEMS_JERRYCAN_EMPTY, "Empty Jerrycan", _refill, "Land_CanisterFuel_F", _icon, _max] call mf_inventory_create;
-[MF_ITEMS_JERRYCAN_FULL, "Full Jerrycan", _refuel, "Land_CanisterFuel_F", _icon, _max] call mf_inventory_create;
-[MF_ITEMS_SYPHON_HOSE, "Syphon Hose", _syphon, "Land_CanisterOil_F", _icon, MF_ITEMS_SYHON_HOSE_MAX] call mf_inventory_create;
+[MF_ITEMS_JERRYCAN_EMPTY, "Bidón de gasolina vacío", _refill, "Land_CanisterFuel_F", _icon, _max] call mf_inventory_create;
+[MF_ITEMS_JERRYCAN_FULL, "Bidón de gasolina lleno", _refuel, "Land_CanisterFuel_F", _icon, _max] call mf_inventory_create;
+[MF_ITEMS_SYPHON_HOSE, "Sifón", _syphon, "Land_CanisterOil_F", _icon, MF_ITEMS_SYHON_HOSE_MAX] call mf_inventory_create;
 
 mf_jerrycan_can_refill = [_path, "can_refill.sqf"] call mf_compile;
 mf_jerrycan_can_refuel = [_path, "can_refuel.sqf"] call mf_compile;
@@ -81,7 +81,7 @@ mf_jerrycan_can_syphon = [_path, "can_syphon.sqf"] call mf_compile;
 
 // Setting up refill action.
 private ["_label1", "_execute1", "_condition1", "_action1"];
-_label1 = format["<img image='%1'/> Fill Jerry Can", _icon];
+_label1 = format["<img image='%1'/> Rellenar bidón de gasolina", _icon];
 _execute1 = {MF_ITEMS_JERRYCAN_EMPTY call mf_inventory_use};
 _condition1 = format["[] call %1 == ''", mf_jerrycan_can_refill];
 _action1 = [_label1, _execute1, [], 1, false, false, "", _condition1];
