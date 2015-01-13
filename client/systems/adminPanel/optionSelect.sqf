@@ -51,7 +51,7 @@ if (_uid call isAdmin) then
 						["A3W_teleport", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 						true
 					}] call BIS_fnc_addStackedEventHandler;
-					hint "Click on map to teleport";
+					hint "Haz click en el mapa para teletransportarte";
 				};
 				case 4: //Money
 				{
@@ -108,7 +108,7 @@ if (_uid call isAdmin) then
 				};
 				case 5: //Show server FPS function
 				{
-					hint format["Server FPS: %1",serverFPS];
+					hint format["FPS del servidor: %1",serverFPS];
 				};
 				case 6: //Test Function
 				{
