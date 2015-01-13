@@ -56,7 +56,7 @@ _createRandomObject =
 		_counter = _counter + 1;
 		_lcounter = _lcounter + 1;
 	};
-	//diag_log format["WASTELAND DEBUG - spawned %1 Objects in: %2",_lcounter,_townname];
+	//diag_log format["AMENO WASTELAND DEBUG - creados %1 objetos en: %2",_lcounter,_townname];
 	_lcounter = 0;
 } forEach (call citylist);
 
@@ -65,4 +65,4 @@ _createRandomObject =
 	waitUntil {scriptDone _x};
 } forEach _spawnedObjects;
 
-diag_log format["WASTELAND - Object spawning completed - %1 Objects Spawned on Altis",_counter];
+diag_log format["AMENO WASTELAND - Creación de objetos completada - %1 objetos creados en Stratis",_counter];
