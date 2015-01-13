@@ -31,7 +31,7 @@ private ["_label", "_code", "_condition"];
 
 // Take Food from Sacks
 
-_label = "<img image='client\icons\cannedfood.paa'/> Take Canned Food";
+_label = "<img image='client\icons\cannedfood.paa'/> Coger comida en lata";
 _condition = "{_x getVariable ['food', 0] >= 1} count nearestObjects [player, ['Land_Sacks_goods_F'], 3] > 0 && !(MF_ITEMS_CANNED_FOOD call mf_inventory_is_full)";
 _code =
 {
@@ -67,7 +67,7 @@ _code =
 
 // Take Water from White water container
 
-_label = "<img image='client\icons\water.paa'/> Fill Water Bottle";
+_label = "<img image='client\icons\water.paa'/> Rellenar botella de agua";
 _condition = "{_x getVariable ['water', 0] >= 1} count nearestObjects [player, ['Land_BarrelWater_F'], 3] > 0 && !(MF_ITEMS_WATER call mf_inventory_is_full)";
 _code =
 {
@@ -110,7 +110,7 @@ _code =
 
 // Take Water from Well
 
-_label = "<img image='client\icons\water.paa'/> Fill Water Bottle";
+_label = "<img image='client\icons\water.paa'/> Rellenar botella de agua";
 _condition = "count nearestObjects [player, ['Land_StallWater_F', 'Land_Water_source_F'], 3] > 0 && !(MF_ITEMS_WATER call mf_inventory_is_full)";
 _code =
 {
