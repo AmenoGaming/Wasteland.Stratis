@@ -25,7 +25,7 @@ if ([_uid, 3] call isAdmin) then {
 	                "Dinero",
 	                "Menú Debug",
 					"Búsqueda de objetos",
-	                "Cambiar el God-mode"
+	                "Cambiar God-mode"
 	];
 
 	{
