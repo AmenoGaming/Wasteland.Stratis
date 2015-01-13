@@ -7,8 +7,8 @@
 
 #include "defines.sqf"
 
-#define ERR_NOT_ENOUGH_FUNDS "There are not enough funds in the crate."
-#define ERR_LESS_THAN_ONE "The amount must be at least $1"
+#define ERR_NOT_ENOUGH_FUNDS "No hay suficientes fondos en esta caja."
+#define ERR_LESS_THAN_ONE "La cantidad debe ser al menos $1"
 
 disableSerialization;
 private ["_crate", "_dialog", "_input", "_amount", "_money"];
