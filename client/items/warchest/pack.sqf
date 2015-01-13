@@ -4,10 +4,10 @@
 #include "mutex.sqf"
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define DURATION MF_ITEMS_WARCHEST_PACK_DURATION
-#define ERR_CANCELLED "Packing Warchest Cancelled"
-#define ERR_IN_VEHICLE "Packing Warchest Failed: You can't do that in a vehicle."
-#define ERR_TOO_FAR_AWAY "Packing Warchest Failed: You moved too far away."
-#define ERR_SOMEONE_ELSE "Packing Warchest Failed: Someone else beat you."
+#define ERR_CANCELLED "Fallo al guardar la caja"
+#define ERR_IN_VEHICLE "Fallo al guardar la caja: no puedes guardarla en el vehículo."
+#define ERR_TOO_FAR_AWAY "Fallo al guardar la caja: estás demasiado lejos."
+#define ERR_SOMEONE_ELSE "Fallo al guardar la caja: alguien te ha ganado."
 private ["_warchest", "_error", "_success"];
 _warchest = [] call mf_items_warchest_nearest;
 _error = [] call mf_items_warchest_can_pack;
@@ -27,7 +27,7 @@ _hasFailed = {
 		case (player distance _warchest > 5): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED};
 		default {
-			_text = format["Warchest %1%2 Packed", round(_progress*100), "%"];
+			_text = format["Caja %1%2 guardada", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
