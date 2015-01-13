@@ -136,4 +136,4 @@ _boxList =
 	};
 } forEach (call cityList);
 
-diag_log format ["WASTELAND SERVER - %1 Ammo Caches Spawned",_counter];
+diag_log format ["AMENO WASTWELAND - %1 cajas de armas creadas",_counter];
