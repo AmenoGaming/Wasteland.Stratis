@@ -36,7 +36,7 @@ _hasFailed = {
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED};
 		//case (count units group player < 2): {_text = ERR_NO_GROUP};
 		default {
-			_text = format["Spawn beacon is %1%2 updated", round(_progress*100), "%"];
+			_text = format["Spawn beacon ha sido %1%2 actualizado", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
@@ -51,10 +51,10 @@ MUTEX_UNLOCK;
 
 if (_success) then {
 	if (_currentGroupOnlyState) then {
-		["The Spawn Beacon is now available to your whole team", 5] call mf_notify_client;
+		["El Spawn Beacon está disponible para todo tu equipo", 5] call mf_notify_client;
 		_beacon setVariable ['groupOnly', false, true];
 	} else {
-		["The Spawn Beacon is now limited to your group", 5] call mf_notify_client;
+		["El Spawn Beacon está limitado a tu grupo", 5] call mf_notify_client;
 		_beacon setVariable ['groupOnly', true, true];
 	};
 };
