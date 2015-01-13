@@ -6,7 +6,7 @@
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 
-if(player != leader group player) exitWith {player globalChat format["you are not the leader and can't invite people"];};
+if(player != leader group player) exitWith {player globalChat format["No eres el líder y no puedes invitar a otros jugadores"];};
 
 #define groupManagementDialog 55510
 #define groupManagementPlayerList 55511
@@ -28,12 +28,12 @@ _hasInvite = false;
 diag_log "Invite to group: Before the checks";
 
 //Checks
-if(isNil "_target") exitWith {player globalChat "you must select someone to invite first"};
-if(_target == player) exitWith {player globalChat "you can't invite yourself"};
-if((count units group _target) > 1) exitWith {player globalChat "This player is already in a group"};
+if(isNil "_target") exitWith {player globalChat "Debes seleccionar alguien primero, para poder invitar"};
+if(_target == player) exitWith {player globalChat "No puedes invitarte a ti mismo"};
+if((count units group _target) > 1) exitWith {player globalChat "Este jugador se encuentra todavía en un grupo"};
 
 { if (_x select 1 == getPlayerUID _target) then { _hasInvite = true } } forEach currentInvites;
-if(_hasInvite) exitWith {player globalChat "This player already has a pending invite"};
+if(_hasInvite) exitWith {player globalChat "Este jugador tiene pendiente todavía una invitación"};
 
 diag_log "Invite to group: After the checks";
 
@@ -45,7 +45,7 @@ publicVariableServer "pvar_processGroupInvite";
 
 //[format ["You have been invited to join %1's group", name player], "A3W_fnc_titleTextMessage", _target, false] call A3W_fnc_MP;
 
-player globalChat format["You have invited %1 to join the group", name _target];
+player globalChat format["Has invitado a %1 para unirse al grupo", name _target];
 
 player setVariable ["currentGroupRestore", group player, true];
 player setVariable ["currentGroupIsLeader", true, true];
