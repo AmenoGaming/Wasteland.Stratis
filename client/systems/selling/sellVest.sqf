@@ -12,7 +12,7 @@
 if (isNull vestContainer player) exitWith
 {
 	playSound "FD_CP_Not_Clear_F";
-	hint "You don't have a vest to sell!";
+	hint "No tienes chaleco para vender!";
 };
 
 storeSellingHandle = _this spawn
@@ -52,7 +52,7 @@ storeSellingHandle = _this spawn
 	} forEach _allObjItems;
 
 	// Add total sell value to confirm message
-	_confirmMsg = format ["You will obtain $%1 for:<br/>", [_sellValue] call fn_numbersText];
+	_confirmMsg = format ["Obtendrás $%1 por:<br/>", [_sellValue] call fn_numbersText];
 
 	// Add item quantities and names to confirm message
 	{
@@ -76,13 +76,13 @@ storeSellingHandle = _this spawn
 
 			player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + _sellValue, true];
 
-			hint format ['You sold "%1" for $%2', _objName, _sellValue];
+			hint format ['Has vendido "%1" por $%2', _objName, _sellValue];
 			playSound "FD_Finish_F";
 		}
 		else
 		{
 			playSound "FD_CP_Not_Clear_F";
-			[format ['The contents of "%1" have changed, please restart the selling process.', _objName], "Error"] call BIS_fnc_guiMessage;
+			[format ['El contenido de "%1" ha cambiado, por favor vuelve a empezar el proceso de compra.', _objName], "Error"] call BIS_fnc_guiMessage;
 		};
 	};
 };
