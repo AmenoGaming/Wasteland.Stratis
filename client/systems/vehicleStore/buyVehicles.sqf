@@ -8,7 +8,7 @@
 
 scriptName "buyVehicles";
 
-if (!isNil "storePurchaseHandle" && {typeName storePurchaseHandle == "SCRIPT"} && {!scriptDone storePurchaseHandle}) exitWith {hint "Please wait, your previous purchase is being processed"};
+if (!isNil "storePurchaseHandle" && {typeName storePurchaseHandle == "SCRIPT"} && {!scriptDone storePurchaseHandle}) exitWith {hint "Por favor, espera, tu compra anterior se está procesando"};
 
 if (!isNil "vehicleStore_lastPurchaseTime") then
 {
@@ -16,7 +16,7 @@ if (!isNil "vehicleStore_lastPurchaseTime") then
 
 	if (_timeLeft > 0) then
 	{
-		hint format ["You need to wait %1s before buying another vehicle", ceil _timeLeft];
+		hint format ["Debes esperar %1s antes de comprar otro vehículo", ceil _timeLeft];
 		playSound "FD_CP_Not_Clear_F";
 		breakOut "buyVehicles";
 	};
@@ -52,7 +52,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientFundsError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["Not enough money for<br/>""%1""", _itemText];
+		hint parseText format ["No tienes suficiente dinero para<br/>""%1""", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -60,7 +60,7 @@ storePurchaseHandle = _this spawn
 	_showItemSpawnTimeoutError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>An unknown error occurred.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		hint parseText format ["<t color='#ffff00'>Ha ocurrido un error desconocido.</t><br/>La compra de ""%1"" ha sido cancelada.", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -68,7 +68,7 @@ storePurchaseHandle = _this spawn
 	_showItemSpawnedOutsideMessage =
 	{
 		_itemText = _this select 0;
-		hint format ["""%1"" has been spawned outside, in front of the store.", _itemText];
+		hint format ["""%1"" ha spawneado fuera, delante de la tienda.", _itemText];
 		playSound "FD_Finish_F";
 	};
 
