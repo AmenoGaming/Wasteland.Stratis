@@ -9,11 +9,11 @@
 //@file Argument: [_beacon] the (object that is a) beacon to check if its packable
 //@file Argument: [] automatically find the closest beacon to check.
 
-#define ERR_NO_TARGET "Need to point at a spawn beacon"
-#define ERR_NOT_OWNER "You are not the owner of that beacon"
-#define ERR_TOO_FAR_AWAY "You need to be less that 5 metres from it"
-#define ERR_ALREADY_HAVE_SPAWNBEACON "You can not carry another spawn beacon"
-#define ERR_SOMEONE_ELSE_IS_PACKING "Someone else is packing it already"
+#define ERR_NO_TARGET "Necesitas señalar un spawn beacon"
+#define ERR_NOT_OWNER "No eres el propietario de esta beacon"
+#define ERR_TOO_FAR_AWAY "Tienes que estar a menos de 5 metros"
+#define ERR_ALREADY_HAVE_SPAWNBEACON "No puedes llevar otra spawn beacon"
+#define ERR_SOMEONE_ELSE_IS_PACKING "Alguien más lo está desplegando"
 private ["_beacon", "_beacons", "_error"];
 _beacon = objNull;
 
