@@ -31,7 +31,7 @@ _hasFailed = {
 		case (MF_ITEMS_CAMO_NET call mf_inventory_count <= 0): {_text = ERR_NO_NETS};
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED};
 		default {
-			_text = format["Camouflage Netting %1%2 Unpacked", round(_progress*100), "%"];
+			_text = format["Red de Camuflaje %1%2 Desplegada", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
