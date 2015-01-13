@@ -37,7 +37,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientFundsError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["No tienes suficiente dinero for<br/>""%1""", _itemText];
+		hint parseText format ["No tienes suficiente dinero para<br/>""%1""", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -45,7 +45,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientSpaceError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["No tienes suficiente espacio for<br/>""%1""", _itemText];
+		hint parseText format ["No tienes suficiente espacio para<br/>""%1""", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -61,7 +61,7 @@ storePurchaseHandle = _this spawn
 	_showItemSpawnedOutsideMessage =
 	{
 		_itemText = _this select 0;
-		hint format ["""%1"" Ha espawneado fuera, frente a la tienda.", _itemText];
+		hint format ["""%1"" Ha spawneado fuera, frente a la tienda.", _itemText];
 		playSound "FD_Finish_F";
 		_successHint = false;
 	};
@@ -72,21 +72,21 @@ storePurchaseHandle = _this spawn
 
 		if ([_this, 1, false, [false]] call BIS_fnc_param) then
 		{
-			_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual.", _itemText];
+			_itemText = format ["Comprando %1 se reemplazará por tu artículo actual.", _itemText];
 		}
 		else
 		{
 			if ([_this, 2, false, [false]] call BIS_fnc_param) then
 			{
-				_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual.", _itemText];
+				_itemText = format ["Comprando %1 se reemplazará por tu artículo actual.", _itemText];
 			}
 			else
 			{
-				_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual, y los contenidos se perderán.", _itemText];
+				_itemText = format ["Comprando %1 se reemplazará por tu artículo actual, y los contenidos se perderán.", _itemText];
 			};
 		};
 
-		_confirmResult = [parseText _itemText, "Confirmar", "Comprar", true] call BIS_fnc_guiMessage;
+		_confirmResult = [parseText _itemText, "Confirm", "Buy", true] call BIS_fnc_guiMessage;
 
 		if (!_confirmResult) then
 		{
@@ -102,11 +102,11 @@ storePurchaseHandle = _this spawn
 
 		if ([_this, 1, false, [false]] call BIS_fnc_param) then
 		{
-			_itemText = format ["Ya tienes esto %1.", _itemText];
+			_itemText = format ["Ya tienes %1.", _itemText];
 		}
 		else
 		{
-			_itemText = format ["Ya tienes esto %1.", _itemText];
+			_itemText = format ["Ya tienes %1.", _itemText];
 		};
 
 		playSound "FD_CP_Not_Clear_F";
