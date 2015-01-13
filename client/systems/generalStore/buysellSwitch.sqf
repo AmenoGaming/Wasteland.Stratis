@@ -16,7 +16,7 @@ _buysell = _dialog displayCtrl genstore_buysell;
 
 //Check which state we want to be in.
 _switchText = ctrlText _buysell;
-if(_switchText == "Buy") then
+if(_switchText == "Comprar") then
 {
 	[] execVM "client\systems\generalStore\buyItems.sqf";
 
