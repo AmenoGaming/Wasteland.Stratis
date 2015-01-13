@@ -10,9 +10,9 @@
 
 #define DURATION 5 // seconds
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Refueling Failed! You can't do that while in a vehicle"
-#define ERR_TOO_FAR_AWAY "Refueling Failed! You moved too far away from the vehicle"
-#define ERR_CANCELLED "Refueling Cancelled!"
+#define ERR_IN_VEHICLE "Error de Respostaje! No puedes hacer esto mientras te encuentras en un vehículo."
+#define ERR_TOO_FAR_AWAY "Error de Respostaje! Te has movido demasiado lejos del vehículo."
+#define ERR_CANCELLED "Respostaje Cancelado!"
 
 private ["_vehicle", "_error"];
 _vehicle = call mf_jerrycan_nearest_vehicle;
@@ -44,6 +44,6 @@ if (_success) then {
 	[[netId _vehicle], "mf_remote_refuel", _vehicle] call A3W_fnc_MP;
 	[MF_ITEMS_JERRYCAN_FULL, 1] call mf_inventory_remove;
 	[MF_ITEMS_JERRYCAN_EMPTY, 1] call mf_inventory_add;
-	["Refueling complete!", 5] call mf_notify_client;
+	["Repostaje Completado!", 5] call mf_notify_client;
 };
 false;
