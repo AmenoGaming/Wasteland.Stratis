@@ -11,10 +11,10 @@
 #include "mutex.sqf"
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define DURATION 15
-#define ERR_TOO_FAR_AWAY "Packing Camouflage Netting Failed. You moved too far away"
-#define ERR_ALREADY_TAKEN "Packing Camouflage Netting Failed. Someone else beat you to it."
-#define ERR_IN_VEHICLE "Packing Camouflage Netting Failed. You can't do this in a vehicle."
-#define ERR_CANCELLED "Packing Camouflage Netting Cancelled"
+#define ERR_TOO_FAR_AWAY "Recoger red de camuflaje fallido! Estás demasiado lejos"
+#define ERR_ALREADY_TAKEN "Recoger red de camuflaje fallido! Alguien se te ha adelantado"
+#define ERR_IN_VEHICLE "Recoger red de camuflaje fallido! No puedes hacerlo desde un vehículo"
+#define ERR_CANCELLED "Recoger red de camuflaje cancelado"
 
 private ["_beacon", "_error", "_hasFailed", "_success"];
 _netting = [] call mf_items_camo_net_nearest;
