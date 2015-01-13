@@ -16,7 +16,7 @@ _iteminv = _dialog displayCtrl genstore_iteminventory;
 
 _switchText = ctrlText _iteminv;
 
-if(_switchText == "Inventory") then
+if(_switchText == "Inventario") then
 {
 	[] execVM "client\systems\generalStore\getInventory.sqf";
 } else {
