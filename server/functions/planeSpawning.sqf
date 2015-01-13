@@ -24,4 +24,4 @@ _counter = 0;
 	};
 } forEach allMapMarkers;
 
-diag_log format["WASTELAND SERVER - %1 Planes Spawned",_counter];
+diag_log format["AMENO WASTELAND - %1 aviones estáticos creados",_counter];
