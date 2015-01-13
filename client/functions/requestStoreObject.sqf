@@ -19,7 +19,7 @@ publicVariableServer "pvar_spawnStoreObject";
 private ["_requestTimeout", "_object"];
 
 _requestTimeout = time + OBJECT_PURCHASE_TIMEOUT;
-hint "Awaiting server response...";
+hint "Esperando respuesta del servidor...";
 
 [] spawn
 {
