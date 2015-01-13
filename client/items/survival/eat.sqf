@@ -8,7 +8,7 @@
 //@file Description: Eat and replenish your hunger
 //@file Argument: the amount of hunger to replenish
 
-#define ERR_CANCELLED "Eating Cancelled";
+#define ERR_CANCELLED "Comer cancelado";
 #define ANIMATION "AinvPknlMstpSnonWnonDnon_healed_1"
 private ["_checks", "_success","_text"];
 _checks = {
