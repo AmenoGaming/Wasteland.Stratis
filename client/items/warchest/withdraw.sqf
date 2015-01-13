@@ -2,8 +2,8 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 #include "defines.sqf"
-#define ERR_NOT_ENOUGH_FUNDS "There are not enough funds in the warchest."
-#define ERR_LESS_THAN_ONE "The amount must be at least $1"
+#define ERR_NOT_ENOUGH_FUNDS "No tienes suficiente dinero en la caja."
+#define ERR_LESS_THAN_ONE "La cantidad debe ser como mínimo de $1"
 disableSerialization;
 private ["_warchest", "_input", "_amount", "_money"];
 _warchest = findDisplay IDD_WARCHEST;
