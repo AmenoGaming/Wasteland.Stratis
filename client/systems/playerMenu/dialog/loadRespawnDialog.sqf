@@ -44,7 +44,7 @@ _side = switch (playerSide) do
 	default      { "Independent" };
 };
 
-_respawnText ctrlSetStructuredText parseText (format ["Welcome to Wasteland<br/>You are on %1. Please select a spawn point.", _side]);
+_respawnText ctrlSetStructuredText parseText (format ["Bienvenido a Ameno Wasteland<br/>Estas en el grupo de %1. Por favor, selecciona un punto de reaparición", _side]);
 respawnDialogActive = true;
 
 //buttonSetAction [respawn_Random_Button, format ["%1 [%2,0] execVM 'client\functions\spawnAction.sqf'", _disableAllButtons, respawn_Random_Button]];
@@ -365,7 +365,7 @@ _locType ctrlAddEventHandler ["LBSelChanged",
 	_locList lbSetCurSel -1;
 
 	_spawnButton = _display displayCtrl respawn_Spawn_Button;
-	_spawnButton ctrlSetText "Loading...";
+	_spawnButton ctrlSetText "Cargando...";
 
 	uiNamespace setVariable ["RespawnSelectionDialog_updateLocs", true];
 }];
@@ -389,7 +389,7 @@ _typeAutoSel = false;
 	while {!isNull _display} do
 	{
 		_timeText = [serverTime/60/60] call BIS_fnc_timeToString;
-		_missionUptimeText ctrlSetText format ["Mission uptime: %1", _timeText];
+		_missionUptimeText ctrlSetText format ["Mision en marcha: %1", _timeText];
 		[_locList, lbCurSel _locList] call _selLocChanged;
 		uiSleep 0.9;
 	};
@@ -400,7 +400,7 @@ while {!isNull _display} do
 {
 	_time = diag_tickTime;
 	//_timeText = [serverTime/60/60] call BIS_fnc_timeToString;
-	//_missionUptimeText ctrlSetText format ["Mission uptime: %1", _timeText];
+	//_missionUptimeText ctrlSetText format ["Mision en marcha: %1", _timeText];
 
 	_locations = [];
 
@@ -534,7 +534,7 @@ while {!isNull _display} do
 			};
 		};
 
-		_spawnButton ctrlSetText "Spawn";
+		_spawnButton ctrlSetText "Reaparecer";
 	};
 
 	_oldLocArray = _newLocArray;
