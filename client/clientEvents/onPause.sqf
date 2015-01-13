@@ -65,13 +65,13 @@ if (alive player && !isNil "_getPublicVar" && !isNil "_isConfigOn") then
 						{
 							if (_unconscious) then
 							{
-								_text = "\n\n\n\nCannot pussy out during bleeding!";
+								_text = "\n\n\n\nNo puedes salir por patas mientras te desangras!";
 							}
 							else
 							{
 								_time = with missionNamespace do { (_abortDelay - (diag_tickTime - _timeStamp)) call fn_formatTimer };
 
-								_text = format ["\nCannot pussy out during combat! (%1)", _time];
+								_text = format ["\nNo puedes salir por patas mientras estas en combate (%1)", _time];
 							};
 
 							cutText [_text, "PLAIN DOWN"];
