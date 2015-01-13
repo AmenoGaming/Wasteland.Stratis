@@ -49,7 +49,7 @@ class PlayersMenu
 		class DialogTitleText: w_RscText
 		{
 			idc = -1;
-			text = "Player Menu";
+			text = "Menú de jugador";
 
 			font = "PuristaMedium";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -84,7 +84,7 @@ class PlayersMenu
 		class PlayerSkinText: w_RscText
 		{
 			idc = playerMenuPlayerSkin;
-			text = "Skin:";
+			text = "Modelo:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
 			y = 0.255 * safezoneH + safezoneY;
@@ -95,7 +95,7 @@ class PlayersMenu
 		class PlayerGunText: w_RscText
 		{
 			idc = playerMenuPlayerGun;
-			text = "Money:";
+			text = "Dinero:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
 			y = 0.275 * safezoneH + safezoneY;
@@ -106,7 +106,7 @@ class PlayersMenu
 		class PlayerItemsText: w_RscText
 		{
 			idc = playerMenuPlayerItems;
-			text = "Items:";
+			text = "Objetos:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
 			y = 0.295 * safezoneH + safezoneY;
@@ -117,7 +117,7 @@ class PlayersMenu
 		class PlayerHealthText: w_RscText
 		{
 			idc = playerMenuPlayerHealth;
-			text = "Health:";
+			text = "Vida:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
 			y = 0.315 * safezoneH + safezoneY;
@@ -128,7 +128,7 @@ class PlayersMenu
 		class PlayerPosistionText: w_RscText
 		{
 			idc = playerMenuPlayerPos;
-			text = "Position:";
+			text = "Posición:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
@@ -162,7 +162,7 @@ class PlayersMenu
 		class SpectateButton: w_RscButton
 		{
 			idc = playerMenuSpectateButton;
-			text = "Spectate";
+			text = "Espectador";
 			onButtonClick = "[0] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.2 * safezoneW + safezoneX;
 			y = 0.70 * safezoneH + safezoneY;
@@ -173,7 +173,7 @@ class PlayersMenu
 		class SlayButton: w_RscButton
 		{
 			idc = -1;
-			text = "Slay";
+			text = "Asesinados";
 			onButtonClick = "[2] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.2 * safezoneW + safezoneX;
 			y = 0.748 * safezoneH + safezoneY;
@@ -184,7 +184,7 @@ class PlayersMenu
 		class UnlockTeamSwitchButton: w_RscButton
 		{
 			idc = -1;
-			text = "Unlock Team Switch";
+			text = "Desbloquear el cambio de equipo";
 			onButtonClick = "[3] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.255 * safezoneW + safezoneX;
 			y = 0.70 * safezoneH + safezoneY;
@@ -195,7 +195,7 @@ class PlayersMenu
 		class UnlockTeamKillerButton: w_RscButton
 		{
 			idc = -1;
-			text = "Unlock Team Kill";
+			text = "Desbloquear fuego amigo";
 			onButtonClick = "[4] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.255 * safezoneW + safezoneX;
 			y = 0.748 * safezoneH + safezoneY;
@@ -206,7 +206,7 @@ class PlayersMenu
 		class RemoveAllMoneyButton: w_RscButton
 		{
 			idc = -1;
-			text = "Remove Money";
+			text = "Eliminar dinero";
 			onButtonClick = "[5] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.3705 * safezoneW + safezoneX;
 			y = 0.70 * safezoneH + safezoneY;
@@ -217,7 +217,7 @@ class PlayersMenu
 		/*class RemoveAllWeaponsButton: w_RscButton
 		{
 			idc = -1;
-			text = "Remove Weapons";
+			text = "Eliminar armas";
 			onButtonClick = "[6] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.3705 * safezoneW + safezoneX;
 			y = 0.748 * safezoneH + safezoneY;
@@ -228,7 +228,7 @@ class PlayersMenu
 		/*class CheckPlayerGearButton: w_RscButton
 		{
 			idc = -1;
-			text = "Gear";
+			text = "Equipamiento";
 			onButtonClick = "[7] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.482 * safezoneW + safezoneX;
 			y = 0.748 * safezoneH + safezoneY;
@@ -239,7 +239,7 @@ class PlayersMenu
 		class WarnButton: w_RscButton
 		{
 			idc = -1;
-			text = "Warn";
+			text = "Aviso";
 			onButtonClick = "[1] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.600 * safezoneW + safezoneX;
 			y = 0.70 * safezoneH + safezoneY;
@@ -250,7 +250,7 @@ class PlayersMenu
 		/*class DonationButton: w_RscButton
 		{
 			idc = -1;
-			text = "Donation";
+			text = "Donación";
 			onButtonClick = "[8] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.655 * safezoneW + safezoneX;
 			y = 0.70  * safezoneH + safezoneY;
