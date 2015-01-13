@@ -38,7 +38,7 @@ if (_uid call isAdmin) then
 		};
 	}forEach vehicles;
 
-	_vehicleCountText ctrlSetText format["Vehicles on Server: %1", _vehicleCount];
+	_vehicleCountText ctrlSetText format["Vehículos en el servidor: %1", _vehicleCount];
 
 	/*if((_uid in moderators)) then
 	{
