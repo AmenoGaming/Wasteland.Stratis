@@ -33,7 +33,7 @@ if(_target == player) exitWith {player globalChat "No puedes invitarte a ti mism
 if((count units group _target) > 1) exitWith {player globalChat "Este jugador se encuentra todavía en un grupo"};
 
 { if (_x select 1 == getPlayerUID _target) then { _hasInvite = true } } forEach currentInvites;
-if(_hasInvite) exitWith {player globalChat "Este jugador tiene pendiente todavía una invitación"};
+if(_hasInvite) exitWith {player globalChat "Este jugador tiene pendiente una invitación"};
 
 diag_log "Invite to group: After the checks";
 
