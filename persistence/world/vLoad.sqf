@@ -165,4 +165,4 @@ if (!isNil "_exists" && {_exists}) then
 	};
 };
 
-diag_log format ["A3Wasteland - world persistence loaded %1 vehicles from %2", _vehCount, ["A3W_savingMethodName", "a rip in the fabric of space-time"] call getPublicVar];
+diag_log format ["Ameno Wasteland - Persistencia activa, cargados %1 vehículos de %2", _vehCount, ["A3W_savingMethodName", "a rip in the fabric of space-time"] call getPublicVar];
