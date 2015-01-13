@@ -14,8 +14,8 @@
 #define HEALTH_DELTA TIME_DELTA*(100/HEALTH_TIME)/100
 #define HUNGER_DELTA TIME_DELTA*(100/HUNGER_TIME)
 #define THIRST_DELTA TIME_DELTA*(100/THIRST_TIME)
-#define STARVATION "<t size='2' color='#ffff00'> R.I.P.</t><br/><br/>You have died from: <br/><t size='2' color='#ff0000'>starvation</t><br/><br/>You need to eat to survive here!<br/>"
-#define DEHYDRATION "<t size='2' color='#ffff00'> R.I.P.</t><br/><br/>You have died from: <br/><t size='2' color='#ff0000'>dehydration</t><br/><br/>You need to drink to survive here!<br/>"
+#define STARVATION "<t size='2' color='#ffff00'> D.E.P.</t><br/><br/>Has muerto de: <br/><t size='2' color='#ff0000'>inanición</t><br/><br/>Necesitas comer para sobrevivir!<br/>"
+#define DEHYDRATION "<t size='2' color='#ffff00'> D.E.P.</t><br/><br/>Has muerto de: <br/><t size='2' color='#ff0000'>deshidratación</t><br/><br/>Necesitas comer para sobrevivir!<br/>"
 
 private["_warnf1","_warnf2","_warnf3","_warnf4","_warnd1","_warnd2","_warnd3","_warnd4"];
 
@@ -49,12 +49,12 @@ mf_survival_handle1 = [] spawn
 		switch (true) do {
 			case (hungerLevel <= 0): {
 				_health = (damage player) + HEALTH_DELTA;
-				if (_health > 1) then {hint parseText STARVATION};
+				if (_health > 1) then {hint parseText INANICIÓN};
 				player setDamage _health;
 			};
 			case (thirstLevel <= 0): {
 				_health = (damage player) + HEALTH_DELTA;
-				if (_health > 1) then {hint parseText DEHYDRATION};
+				if (_health > 1) then {hint parseText DESHIDRATACIÓN};
 				player setDamage _health;
 			};
 		};
