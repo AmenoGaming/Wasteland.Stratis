@@ -30,7 +30,7 @@ _item = _id call mf_inventory_get;
 _type = _item select OBJECT;
 
 if (_item select QTY <= 0) exitWith {
-	hint format["you have no %1 to drop", _item select NAME];
+	hint format["No tienes %1 para tirar", _item select NAME];
 };
 
 private ["_pos", "_obj"];
