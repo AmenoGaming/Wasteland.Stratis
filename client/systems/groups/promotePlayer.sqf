@@ -8,7 +8,7 @@
 
 #include "defines.hpp"
 
-if(player != leader group player) exitWith {player globalChat format["you are not the leader and can't promote people"];};
+if(player != leader group player) exitWith {player globalChat format["No eres líder por lo que no puedes ascender jugadores!"];};
 
 #define groupManagementDialog 55510
 #define groupManagementGroupList 55512
@@ -28,9 +28,9 @@ _playerData = _groupListBox lbData _index;
 //diag_log "Promote to leader: Before the checks";
 
 //Checks
-if (isNil "_target") exitWith { player globalChat "You must select someone to promote first." };
+if (isNil "_target") exitWith { player globalChat "Primero selecciona el jugador." };
 
-if (_target == player) exitWith { player globalChat "You can't promote yourself." };
+if (_target == player) exitWith { player globalChat "No puedes ascenderte a ti mismo." };
 
 _inCombat = false;
 
@@ -52,11 +52,11 @@ if (!_inCombat) then
 	(group player) selectLeader _target;
 	["You have been promoted to group leader.", "A3W_fnc_titleTextMessage", _target] call A3W_fnc_MP;
 
-	player globalChat format ["You have promoted %1 to group leader", name _target];
+	player globalChat format ["Has ascendido a %1 y ahora es el líder del grupo", name _target];
 	player setVariable ["currentGroupIsLeader", false, true];
 	_target setVariable ["currentGroupIsLeader", true, true];
 }
 else
 {
-	player globalChat "This player is in combat. You can't make it leader right now";
+	player globalChat "El jugador está en combate. No puedes hacerle líder ahora mismo.";
 };
