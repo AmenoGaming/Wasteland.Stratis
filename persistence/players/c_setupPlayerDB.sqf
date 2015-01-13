@@ -46,12 +46,12 @@ fn_deletePlayerData =
 			{
 				if (_preload) then
 				{
-					player groupChat "Preloading previous location...";
+					player groupChat "Precargando tu última posición...";
 					waitUntil {sleep 0.1; preloadCamera _pos};
 				}
 				else
 				{
-					player groupChat "Loading previous location...";
+					player groupChat "Cargando tu última posición...";
 				};
 			}
 			else
@@ -68,7 +68,7 @@ fn_deletePlayerData =
 
 		if (_saveValid) then
 		{
-			player groupChat "Player account loaded!";
+			player groupChat "Cuenta del jugador cargada!";
 
 			if (isNil "playerData_resetPos") then
 			{
@@ -80,7 +80,7 @@ fn_deletePlayerData =
 			}
 			else
 			{
-				player groupChat "Your position has been reset";
+				player groupChat "Tu posición ha sido reseteada";
 			};
 		};
 
