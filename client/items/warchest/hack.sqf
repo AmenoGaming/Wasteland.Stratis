@@ -4,10 +4,10 @@
 #include "mutex.sqf"
 #define DURATION MF_ITEMS_WARCHEST_HACK_DURATION
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Warchest Hacking Failed! You can't do that in a vehicle."
-#define ERR_TOO_FAR_AWAY "Warchest Hacking Failed! You are too far away."
-#define ERR_HACKED "Warchest Hacking Failed! Someone else just finished hacking this warchest."
-#define ERR_CANCELLED "Warchest Hacking Cancelled"
+#define ERR_IN_VEHICLE "Hackeado de la caja fallido! No puedes hacer esto en un vehículo."
+#define ERR_TOO_FAR_AWAY "Hackeado de la caja fallido! Te encuentras muy lejos."
+#define ERR_HACKED "Hackeado de la caja fallido! Alguien ha finalizado el hackeo de esta caja."
+#define ERR_CANCELLED "Hackeado de la caja cancelado"
 
 private ["_warchest", "_error", "_success"];
 _warchest = [] call mf_items_warchest_nearest;
@@ -28,7 +28,7 @@ _checks = {
 		case (_warchest getVariable ["side", sideUnknown] == playerSide): {_text = ERR_HACKED};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
-			_text = format["Warchest Hacking %1%2 Complete", round(100 * _progress), "%"];
+			_text = format["Hackeado de la caja %1%2 Completado", round(100 * _progress), "%"];
 			_failed = false;
 		};
 	};
