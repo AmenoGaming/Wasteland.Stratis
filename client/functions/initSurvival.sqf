@@ -71,10 +71,10 @@ mf_survival_handle2 = [] spawn
 		sleep TIME_DELTA;
 		waitUntil {!respawnDialogActive};
 		switch(true) do {
-			case (hungerLevel <= 0 && _warnf1): {_warnf1 = false; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You are now starving to death, find something to eat quickly!", round hungerLevel];};
-			case (hungerLevel <= 10 && hungerLevel > 0 && _warnf2): {_warnf2 = false; _warnf1 = true; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You are starting to starve, you need to find something to eat otherwise you will start to lose health!", round hungerLevel];};
-			case (hungerLevel <= 25 && hungerLevel > 10 && _warnf3): {_warnf3 = false; _warnf2 = true; hint format["You haven't eaten anything in a while, your hunger level is %1\n\n You should find something to eat soon!", round hungerLevel];};
-			case (hungerLevel <= 50 && hungerLevel > 25 && _warnf4): {_warnf4 = false; _warnf3 = true; hint format["You haven't eaten anything in a while, your hunger level is %1\n\n You should find something to eat soon!", round hungerLevel];};
+			case (hungerLevel <= 0 && _warnf1): {_warnf1 = false; hint parseText format["<t size='2' color='#ff0000'>Cuidado</t><br/><br/>Estás muriendo de inanición, encuentra algo para comer rápido!", round hungerLevel];};
+			case (hungerLevel <= 10 && hungerLevel > 0 && _warnf2): {_warnf2 = false; _warnf1 = true; hint parseText format["<t size='2' color='#ff0000'>Cuidado</t><br/><br/>Estás empezando a morir de hambre, tienes que encontrar algo de comer o empezarás a perder salud!", round hungerLevel];};
+			case (hungerLevel <= 25 && hungerLevel > 10 && _warnf3): {_warnf3 = false; _warnf2 = true; hint format["No has comido nada durante un rato, tu nivel de hambre es %1\n\n Deberías comer algo pronto!, round hungerLevel];};
+			case (hungerLevel <= 50 && hungerLevel > 25 && _warnf4): {_warnf4 = false; _warnf3 = true; hint format["No has comido nada durante un rato, tu nivel de hambre es %1\n\n Deberías comer algo pronto!", round hungerLevel];};
 			case (hungerLevel > 50 && !_warnf4): {_warnf4 = true};
 		};
 	};
@@ -90,10 +90,10 @@ mf_survival_handle3 = [] spawn
 		sleep TIME_DELTA;
 		waitUntil {!respawnDialogActive};
 		switch(true) do {
-			case (thirstLevel <= 0 && _warnd1): {_warnd1 = false; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You are now suffering from severe dehydration, find something to drink quickly!", round thirstLevel];};
-			case (thirstLevel <= 10 && thirstLevel > 0 && _warnd2): {_warnd2 = false; _warnd1 = true; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You haven't drank anything in along time, you should find someting to drink soon or you'll start to die from dehydration!", round thirstLevel];};
-			case (thirstLevel <= 25 && thirstLevel > 10 && _warnd3): {_warnd3 = false; _warnd2 = true; hint format["You haven't drank anything in a while, your thirst level is %1\n\nYou should find something to drink soon.", round thirstLevel];};
-			case (thirstLevel <= 50 && thirstLevel > 25 && _warnd4): {_warnd4 = false; _warnd3 = true; hint format["You haven't drank anything in a while, your thirst level is %1", round thirstLevel];};
+			case (thirstLevel <= 0 && _warnd1): {_warnd1 = false; hint parseText format["<t size='2' color='#ff0000'>Cuidado</t><br/><br/>Estás sufriendo una deshidratación sebera, encuentra algo de beber ya!", round thirstLevel];};
+			case (thirstLevel <= 10 && thirstLevel > 0 && _warnd2): {_warnd2 = false; _warnd1 = true; hint parseText format["<t size='2' color='#ff0000'>Cuidado</t><br/><br/>No has bebido nada en bastante tiempo, debes encontrar algo de beber o empezarás a morir de deshidratación!", round thirstLevel];};
+			case (thirstLevel <= 25 && thirstLevel > 10 && _warnd3): {_warnd3 = false; _warnd2 = true; hint format["No has bebido nada durante un rato, tu nivel de sed es %1\n\nDeberías encontrar algo de beber pronto.", round thirstLevel];};
+			case (thirstLevel <= 50 && thirstLevel > 25 && _warnd4): {_warnd4 = false; _warnd3 = true; hint format["No has bebido nada durante un rato, tu nivel de sed es %1", round thirstLevel];};
 			case (thirstLevel > 50 && !_warnd4): {_warnd4 = true};
 		};
 	};
