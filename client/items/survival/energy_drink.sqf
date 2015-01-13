@@ -7,7 +7,7 @@
 //@file Created: 21/7/2013 16:00
 //@file Description: Drink, and replenish your stamina
 
-#define ERR_CANCELLED "Drinking Cancelled";
+#define ERR_CANCELLED "Beber cancelado";
 #define ANIMATION "AinvPknlMstpSnonWnonDnon_healed_1"
 private ["_checks", "_hasFailed"];
 _hasFailed = {
