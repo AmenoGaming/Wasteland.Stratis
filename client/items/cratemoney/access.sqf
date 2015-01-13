@@ -16,10 +16,10 @@ if (isNull findDisplay IDD_WARCHEST) then
 	_dialog = findDisplay IDD_WARCHEST;
 
 	_menuTitle = _dialog displayCtrl IDC_MENUTITLE;
-	_menuTitle ctrlSetText "Money Stash";
+	_menuTitle ctrlSetText "Alijo de dinero";
 
 	_fundsTitle = _dialog displayCtrl IDC_FUNDSTITLE;
-	_fundsTitle ctrlSetText "Funds:";
+	_fundsTitle ctrlSetText "Fondos:";
 
 	_withdraw = _dialog displayCtrl IDC_WITHDRAWBUTTON;
 	_withdraw buttonSetAction "call mf_items_cratemoney_withdraw";
