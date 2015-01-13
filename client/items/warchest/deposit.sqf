@@ -2,8 +2,8 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 #include "defines.sqf"
-#define ERR_NOT_ENOUGH_FUNDS "You don't have enough money."
-#define ERR_LESS_THAN_ONE "The amount must be at least $1"
+#define ERR_NOT_ENOUGH_FUNDS "No tienes suficiente dinero."
+#define ERR_LESS_THAN_ONE "La cantidad debe ser al menos $1"
 disableSerialization;
 private ["_warchest", "_input", "_amount", "_money"];
 _warchest = findDisplay IDD_WARCHEST;
@@ -43,7 +43,7 @@ else
 			publicVariable "pvar_warchest_funds_west";
 			playSound "defaultNotification";
 		};
-		default {hint "Warchest Deposit - This Shouldnt Happen"};
+		default {hint "Caja depositada - Esto no debería haber ocurrido"};
 	};
 
 	if (["A3W_playerSaving"] call isConfigOn) then
