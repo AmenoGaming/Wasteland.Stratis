@@ -37,7 +37,7 @@ _hasFailed = {
 		case (player distance _beacon > 5): {_text = ERR_TOO_FAR_AWAY;};
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED;};
 		default {
-			_text = format["Stealing %1%2 Complete", round(_progress*100), "%"];
+			_text = format["Robando %1%2 Completado", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
@@ -50,5 +50,5 @@ if (_success) then {
 	publicVariable "pvar_spawn_beacons";
 	deleteVehicle _beacon;
 	[MF_ITEMS_SPAWN_BEACON, 1] call mf_inventory_add;
-	["You have successfully stolen the Spawn Beacon",5] call mf_notify_client;
+	["Has robado con éxito el Spawn Beacon",5] call mf_notify_client;
 };
