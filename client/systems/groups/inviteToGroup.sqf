@@ -6,7 +6,7 @@
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 
-if(player != leader group player) exitWith {player globalChat format["No eres el líder y no puedes invitar a otros jugadores"];};
+if(player != leader group player) exitWith {player globalChat format["No eres el líder por lo que no puedes invitar a otros jugadores"];};
 
 #define groupManagementDialog 55510
 #define groupManagementPlayerList 55511
@@ -28,7 +28,7 @@ _hasInvite = false;
 diag_log "Invite to group: Before the checks";
 
 //Checks
-if(isNil "_target") exitWith {player globalChat "Debes seleccionar alguien primero, para poder invitar"};
+if(isNil "_target") exitWith {player globalChat "Debes seleccionar alguien primero para poder invitar"};
 if(_target == player) exitWith {player globalChat "No puedes invitarte a ti mismo"};
 if((count units group _target) > 1) exitWith {player globalChat "Este jugador se encuentra todavía en un grupo"};
 
