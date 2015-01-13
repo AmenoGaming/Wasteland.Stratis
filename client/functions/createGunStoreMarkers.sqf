@@ -42,7 +42,7 @@ _col_mixed = "ColorOrange";
 		_markerName setMarkerTypeLocal "mil_dot";
 		_markerName setMarkerColorLocal "ColorRed";
 		_markerName setMarkerSizeLocal [1,1];
-		_markerName setMarkerTextLocal "GUN STORE";
+		_markerName setMarkerTextLocal "ARMERIA";
 		*/
 
 		// Gun store description
@@ -54,7 +54,7 @@ _col_mixed = "ColorOrange";
 		_markerName setMarkerTypeLocal "mil_dot";
 		_markerName setMarkerColorLocal _col_empty;
 		_markerName setMarkerSizeLocal [1,1];
-		_markerName setMarkerTextLocal "GUN STORE";
+		_markerName setMarkerTextLocal "ARMERIA";
 		// _markerName setMarkerAlphaLocal 0.5;
 
 		_status pushBack "EMPTY";
@@ -74,29 +74,29 @@ _setStatus =
 		case "EMPTY": {
 			_markerNameZone setmarkerColorLocal _col_empty;
 			_markerNameDescription setmarkerColorLocal _col_empty;
-			_markerNameDescription setMarkerTextLocal "GUN STORE";
+			_markerNameDescription setMarkerTextLocal "ARMERIA";
 		};
 		case "ENEMY": {
 			_markerNameZone setmarkerColorLocal _col_enemy;
 			_markerNameDescription setmarkerColorLocal _col_enemy;
-			_markerNameDescription setMarkerTextLocal "GUN STORE (Enemies)";
+			_markerNameDescription setMarkerTextLocal "ARMERIA (Enemigos)";
 		};
 		case "FRIENDLY": {
 			_markerNameZone setmarkerColorLocal _col_friendly;
 			_markerNameDescription setmarkerColorLocal _col_friendly;
-			_markerNameDescription setMarkerTextLocal "GUN STORE (Allies)";
+			_markerNameDescription setMarkerTextLocal "ARMERIA (Aliados)";
 		};
 		case "MIXED": {
 			_markerNameZone setmarkerColorLocal _col_mixed;
 			_markerNameDescription setmarkerColorLocal _col_mixed;
-			_markerNameDescription setMarkerTextLocal "GUN STORE (Enemies and Allies)";
+			_markerNameDescription setMarkerTextLocal "ARMERIA (Aliados y enemigos)";
 		};
 	};
 
 	if (["A3W_gunStoreIntruderWarning"] call isConfigOn) then
 	{
 		if((_this select 2) && ((_this select 1) in ["ENEMY", "MIXED"])) then {
-			hintSilent parseText format ["<t size='2' color='#ff0000'>%1</t><br/><br/>%2.","Warning!","Enemy player just entered the area"];
+			hintSilent parseText format ["<t size='2' color='#ff0000'>%1</t><br/><br/>%2.","Cuidado!","Un enemigo acaba de entrar en la zona"];
 		};
 	};
 
