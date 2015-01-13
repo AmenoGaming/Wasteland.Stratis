@@ -9,9 +9,9 @@
 
 #define DURATION 5
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_NOT_ENOUGH_HEALTH "First Aid Failed! You are too badly injured to use this."
-#define ERR_FULL_HEALTH "First Aid Failed! You already have full health."
-#define ERR_CANCELLED "First Aid Cancelled!"
+#define ERR_NOT_ENOUGH_HEALTH "Fallo al usar Primeros Auxilios! Se encuentra demasiado herido para utilizarlo."
+#define ERR_FULL_HEALTH "Fallo al usar Primeros Auxilios! First Aid Failed! Tienes plena salud."
+#define ERR_CANCELLED "Primeros Auxilios Cancelados!"
 private ["_checks", "_success"];
 if (damage player < 0.005) exitWith {
 	[ERR_FULL_HEALTH, 5] call mf_notify_client;
