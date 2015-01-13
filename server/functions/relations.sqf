@@ -9,7 +9,7 @@
 
 if (!isServer) exitWith {};
 
-diag_log "WASTELAND SERVER - Initializing Server Relations";
+diag_log "AMENO WASTELAND - Iniciando las relaciones del servidor";
 
 BLUFOR setFriend [BLUFOR, 1];
 BLUFOR setFriend [OPFOR, 0];
