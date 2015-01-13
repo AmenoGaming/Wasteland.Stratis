@@ -16,12 +16,12 @@ switch (_type) do
 
 		if (_money > 0) then
 		{
-			[format ["You have picked up $%1", [_money] call fn_numbersText], 5] call mf_notify_client;
+			[format ["Has cogido $%1", [_money] call fn_numbersText], 5] call mf_notify_client;
 			[] spawn fn_savePlayerData;
 		}
 		else
 		{
-			["The money was counterfeit!", 5] call mf_notify_client;
+			["El dinero era falso!", 5] call mf_notify_client;
 		};
 	};
 };
