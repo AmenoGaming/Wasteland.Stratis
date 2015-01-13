@@ -17,7 +17,7 @@ class ActionGUI : IGUIBack {
 
 	class MyButton : w_RscButton {
 		idc = -1;
-		text = "Cancel";
+		text = "Cancelar";
 		x = 0.71;
 		y = 1;
 		w = 0.09;
