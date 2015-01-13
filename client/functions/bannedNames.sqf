@@ -19,7 +19,7 @@ _trueName = [];
 {
 	if (_name == _x) exitWith
 	{
-		[format ['The name "%1" is not allowed, please change it or you may get kicked.', name player], "Notice"] spawn BIS_fnc_guiMessage;
+		[format ['El nombre "%1" no está permitido. Cambiatelo o seras expulsado.', name player], "Notice"] spawn BIS_fnc_guiMessage;
 	}
 } forEach _bannedNames;
 
@@ -34,5 +34,5 @@ _trueName = toString _trueName;
 
 if (_trueName == "") then
 {
-	[format ['The name "%1" is not allowed, please change it or you may get kicked.', name player], "Notice"] spawn BIS_fnc_guiMessage;
+	[format ['El nombre "%1" no está permitido. Cambiatelo o seras expulsado.', name player], "Notice"] spawn BIS_fnc_guiMessage;
 };
