@@ -36,13 +36,13 @@ mf_items_spawn_beacon_can_use = build("can_use.sqf");
 
 private "_condition";
 _condition = "'' == [] call mf_items_spawn_beacon_can_pack;";
-_pack =["Pack Spawn Beacon", path("pack.sqf"), [], 1, true, false, "", _condition];
+_pack =["Recoger Spawn Beacon", path("pack.sqf"), [], 1, true, false, "", _condition];
 ["beacon-pack", _pack] call mf_player_actions_set;
 
 _condition = "'' == [] call mf_items_spawn_beacon_can_steal;";
-_steal = ["Steal Spawn Beacon", path("steal.sqf"), [], 1, true, false, "", _condition];
+_steal = ["Robar Spawn Beacon", path("steal.sqf"), [], 1, true, false, "", _condition];
 ["beacon-steal", _steal] call mf_player_actions_set;
 
 _condition = "'' == [] call mf_items_spawn_beacon_can_pack && {playerSide != independent}";
-_pack =["Change Spawn Permissions", path("toggle_spawn_permissions.sqf"), [], 1, true, false, "", _condition];
+_pack =["Cambiar los permisos de Spawn", path("toggle_spawn_permissions.sqf"), [], 1, true, false, "", _condition];
 ["beacon-spawn-toggle", _pack] call mf_player_actions_set;
