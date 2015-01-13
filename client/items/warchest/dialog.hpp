@@ -17,7 +17,7 @@ class WarchestDialog {
 		class WarchestTitle: RscText {
 			idc = IDC_MENUTITLE;
 			style = ST_CENTER;
-			text = "Warchest";
+			text = "Caja";
 			x = 0.3;
 			y = 0.25;
 			w = 0.4;
@@ -28,7 +28,7 @@ class WarchestDialog {
 		class FundsTitle: RscText {
 			idc = IDC_FUNDSTITLE;
 			style = ST_LEFT;
-			text = "Team Funds:";
+			text = "Fondos del equipo:";
 			x = 0.35;
 			y = 0.325;
 			w = 0.15;
@@ -75,7 +75,7 @@ class WarchestDialog {
 		};
 		class WithdrawButton: w_RscButton {
 			idc = IDC_WITHDRAWBUTTON;
-			text = "Withdraw";
+			text = "Retirar";
 			action = "call mf_items_warchest_withdraw";
 			x = 0.35;
 			y = 0.475;
@@ -84,7 +84,7 @@ class WarchestDialog {
 		};
 		class DepositButton: w_RscButton {
 			idc = IDC_DEPOSITBUTTON;
-			text = "Deposit";
+			text = "Depositar";
 			action = "call mf_items_warchest_deposit";
 			x = 0.525;
 			y = 0.475;
@@ -93,7 +93,7 @@ class WarchestDialog {
 		};
 		class DoneButton: w_RscButton {
 			idc = -1;
-			text = "Done";
+			text = "Hecho";
 			action = "closeDialog 0";
 			x = 0.60;
 			y = 0.56;
