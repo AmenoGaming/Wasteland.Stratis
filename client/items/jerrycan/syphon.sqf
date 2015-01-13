@@ -10,9 +10,9 @@
 
 #define DURATION 15 // seconds
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
-#define ERR_IN_VEHICLE "Syphoning Failed! You can't do that while in a vehicle"
-#define ERR_TOO_FAR_AWAY "Syphoning Failed! You moved too far away from the vehicle"
-#define ERR_CANCELLED "Refueling Cancelled!"
+#define ERR_IN_VEHICLE "Extracción con sifón fallida! No puedes hacerlo desde un vehículo"
+#define ERR_TOO_FAR_AWAY "Extracción con sifón fallida! Estás demasiado lejos del vehículo"
+#define ERR_CANCELLED "Rellenar deposito cancelado"
 
 private ["_vehicle", "_error"];
 _vehicle = call mf_jerrycan_nearest_vehicle;
@@ -31,7 +31,7 @@ _checks = {
 		case (player distance _vehicle > (sizeOf typeOf _vehicle / 3) max 2): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
-			_text = format["Syphoning fuel %1%2 Complete", round(100 * _progress), "%"];
+			_text = format["Extracción con sifón de gasolina %1%2 completada", round(100 * _progress), "%"];
 			_failed = false;
 	    };
 	};
