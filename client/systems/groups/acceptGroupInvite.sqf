@@ -72,5 +72,5 @@ else
 		publicVariableServer "pvar_processGroupInvite";
 	};
 
-	player globalChat "The group no longer exists or the leader disconnected / changed sides";
+	player globalChat "El grupo ya no existe o el líder se ha desconectado / cambiado de bando";
 };
