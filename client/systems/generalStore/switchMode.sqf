@@ -31,14 +31,14 @@ _itemInfo ctrlSetStructuredText parseText "";
 _switchText = ctrlText _switch;
 if(_switchText == "Sell Items") then
 {
-	_switch ctrlSetText "Buy Items";
-	_buysell ctrlSetText "Sell";
-	_iteminv ctrlSetText "Inventory";
+	_switch ctrlSetText "Comprar objetos";
+	_buysell ctrlSetText "Vender";
+	_iteminv ctrlSetText "Inventario";
 	[] execVM "client\systems\generalStore\getInventory.sqf";
 } else {
-	_switch ctrlSetText "Sell Items";
-	_buysell ctrlSetText "Buy";
-	_iteminv ctrlSetText "Items";
+	_switch ctrlSetText "Vender objetos";
+	_buysell ctrlSetText "Comprar";
+	_iteminv ctrlSetText "Objetos";
 	[0] execVM "client\systems\generalStore\populateGenStore.sqf";
 };
 
