@@ -3,7 +3,7 @@
 // ******************************************************************************************
 #define ERR_IN_VEHICLE "No puedes hacerlo mientras estás en un vehículo"
 #define ERR_TOO_FAR "Estás demasiado lejos"
-#define ERR_SAME_SIDE "La caja ya pertenece a tu equipo"
+#define ERR_SAME_SIDE "La caja no pertenece a tu equipo"
 #define ERR_NOT_WARCHEST "Ese objeto no es una caja"
 
 private ["_warchest", "_error"];
