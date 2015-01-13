@@ -83,7 +83,7 @@ if (_uid call isAdmin) then
 				_health = round (_health * (10 ^ _decimalPlaces)) / (10 ^ _decimalPlaces);
 				_health = 100 - (_health * 100);
 
-	            _healthText ctrlSetText format["Health: %1",_health];
+	            _healthText ctrlSetText format["Vida: %1",_health];
 	        };
 	    } foreach playableUnits;
 	};
