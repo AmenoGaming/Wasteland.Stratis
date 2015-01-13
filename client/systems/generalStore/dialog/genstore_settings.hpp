@@ -47,7 +47,7 @@ class genstored
 		class DialogTitleText: w_RscTextCenter
 		{
 			idc = -1;
-			text = "General Store";
+			text = "Objetos generales";
 			sizeEx = 0.06 * TEXT_SCALE;
 
 			x = GenStoreMainBG_X;
@@ -189,7 +189,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[2] execVM 'client\systems\generalStore\populateGenStore.sqf'";
-			text = "Vests";
+			text = "Chalecos";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
@@ -202,7 +202,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[3] execVM 'client\systems\generalStore\populateGenStore.sqf'";
-			text = "Backpacks";
+			text = "Mochilas";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
@@ -215,7 +215,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[4] execVM 'client\systems\generalStore\populateGenStore.sqf'";
-			text = "Items";
+			text = "Objetos";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
@@ -228,7 +228,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[5] execVM 'client\systems\generalStore\populateGenStore.sqf'";
-			text = "Supplies";
+			text = "Suministros";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
@@ -241,7 +241,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[6] execVM 'client\systems\generalStore\populateGenStore.sqf'";
-			text = "Objects";
+			text = "Útiles";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
@@ -254,7 +254,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[] execVM 'client\systems\selling\sellWeapon.sqf'";
-			text = "Sell Weapon";
+			text = "Vender arma";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.23 * SZ_SCALE);
@@ -267,7 +267,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[] execVM 'client\systems\selling\sellUniform.sqf'";
-			text = "Sell Uniform";
+			text = "Vender uniforme";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + ((0.604 - 0.25) * SZ_SCALE);
@@ -280,7 +280,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[] execVM 'client\systems\selling\sellVest.sqf'";
-			text = "Sell Vest";
+			text = "Vender chaleco";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.478 * SZ_SCALE);
@@ -293,7 +293,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "[] execVM 'client\systems\selling\sellBackpack.sqf'";
-			text = "Sell Backpack";
+			text = "Vender mochila";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.602 * SZ_SCALE);
@@ -306,7 +306,7 @@ class genstored
 		{
 			idc = -1;
 			onButtonClick = "closeDialog 0";
-			text = "Cancel";
+			text = "Cancelar";
 			sizeEx = GenStoreButton_textSize;
 
 			x = GenStoreMainBG_X + (0.0167 * SZ_SCALE);
