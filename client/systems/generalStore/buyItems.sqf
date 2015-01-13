@@ -7,7 +7,7 @@
 //	@file Created: 20/11/2012 05:13
 //	@file Args: [int (0 = buy to player 1 = buy to crate)]
 
-if (!isNil "storePurchaseHandle" && {typeName storePurchaseHandle == "SCRIPT"} && {!scriptDone storePurchaseHandle}) exitWith {hint "Please wait, your previous purchase is being processed"};
+if (!isNil "storePurchaseHandle" && {typeName storePurchaseHandle == "SCRIPT"} && {!scriptDone storePurchaseHandle}) exitWith {hint "Por favor espera, se está procesando su compra anterior"};
 
 #include "dialog\genstoreDefines.sqf";
 
@@ -37,7 +37,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientFundsError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["Not enough money for<br/>""%1""", _itemText];
+		hint parseText format ["No tienes suficiente dinero for<br/>""%1""", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -45,7 +45,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientSpaceError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["Not enough space for<br/>""%1""", _itemText];
+		hint parseText format ["No tienes suficiente espacio for<br/>""%1""", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -53,7 +53,7 @@ storePurchaseHandle = _this spawn
 	_showItemSpawnTimeoutError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>An unknown error occurred.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		hint parseText format ["<t color='#ffff00'>Ha ocurrido un error desconocido.</t><br/>La compra de ""%1"" ha sido cancelada.", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
@@ -61,7 +61,7 @@ storePurchaseHandle = _this spawn
 	_showItemSpawnedOutsideMessage =
 	{
 		_itemText = _this select 0;
-		hint format ["""%1"" has been spawned outside, in front of the store.", _itemText];
+		hint format ["""%1"" Ha espawneado fuera, frente a la tienda.", _itemText];
 		playSound "FD_Finish_F";
 		_successHint = false;
 	};
@@ -72,21 +72,21 @@ storePurchaseHandle = _this spawn
 
 		if ([_this, 1, false, [false]] call BIS_fnc_param) then
 		{
-			_itemText = format ["Purchasing these %1 will replace your current ones.", _itemText];
+			_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual.", _itemText];
 		}
 		else
 		{
 			if ([_this, 2, false, [false]] call BIS_fnc_param) then
 			{
-				_itemText = format ["Purchasing this %1 will replace your current one.", _itemText];
+				_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual.", _itemText];
 			}
 			else
 			{
-				_itemText = format ["Purchasing this %1 will replace your current one, and its contents will be lost.", _itemText];
+				_itemText = format ["Comprando esto %1 se reemplazará por tu artículo actual, y los contenidos se perderán.", _itemText];
 			};
 		};
 
-		_confirmResult = [parseText _itemText, "Confirm", "Buy", true] call BIS_fnc_guiMessage;
+		_confirmResult = [parseText _itemText, "Confirmar", "Comprar", true] call BIS_fnc_guiMessage;
 
 		if (!_confirmResult) then
 		{
@@ -102,11 +102,11 @@ storePurchaseHandle = _this spawn
 
 		if ([_this, 1, false, [false]] call BIS_fnc_param) then
 		{
-			_itemText = format ["You already have these %1.", _itemText];
+			_itemText = format ["Ya tienes esto %1.", _itemText];
 		}
 		else
 		{
-			_itemText = format ["You already have this %1.", _itemText];
+			_itemText = format ["Ya tienes esto %1.", _itemText];
 		};
 
 		playSound "FD_CP_Not_Clear_F";
