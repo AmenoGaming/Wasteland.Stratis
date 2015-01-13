@@ -21,7 +21,7 @@ _checks = {
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED;};
 		default {
 			_failed = false;
-			_text = format["Eating %1%2 Complete", round(100*_progress), "%"];
+			_text = format["Comer %1%2 completado", round(100*_progress), "%"];
 		};
 	};
 	[_failed, _text];
