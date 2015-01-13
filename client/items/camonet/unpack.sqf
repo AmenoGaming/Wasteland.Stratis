@@ -9,9 +9,9 @@
 
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define DURATION 15
-#define ERR_NO_NETS "Unpacking Camouflage Netting Failed. You have not Camouflage Netting to unpack"
-#define ERR_IN_VEHICLE "Unpacking Camouflage Netting Failed. You can't do this in a vehicle."
-#define ERR_CANCELLED "Unpacking Camouflage Netting Cancelled"
+#define ERR_NO_NETS "Error al desplegar la red de camuflaje. No tienes la red de camuflaje para desplegar."
+#define ERR_IN_VEHICLE "Error al desplegar la red de camuflaje. No puedes hacer esto en un vehículo."
+#define ERR_CANCELLED "Desplegar la red de camuflaje cancelada"
 
 private ["_netting", "_error", "_hasFailed", "_success", "_pos"];
 
