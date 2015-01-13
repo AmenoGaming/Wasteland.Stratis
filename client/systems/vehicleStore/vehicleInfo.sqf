@@ -36,7 +36,7 @@ _vehText ctrlSetText "";
 	{
 		_vehClass = _x select 1;
 		_price = _x select 2;
-		_vehText ctrlSetText format ["Price: $%1", [_price] call fn_numbersText];
+		_vehText ctrlSetText format ["Precio: $%1", [_price] call fn_numbersText];
 	};
 } forEach (call allVehStoreVehicles);
 
