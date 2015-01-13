@@ -23,4 +23,4 @@ _counter = 0;
 	};
 } forEach allMapMarkers;
 
-diag_log format["WASTELAND SERVER - %1 Boats Spawned",_counter];
+diag_log format["AMENO WASTELAND - %1 barcos creados",_counter];
