@@ -31,10 +31,10 @@ if (_uid call isAdmin) then
 	_speedText = _dialog displayCtrl vehicleSpeedText;
 
 	lbClear _vehicleListBox;
-	_weaponText ctrlSetText format["Weapons:"];
-	_speedText ctrlSetText format["Speed:"];
-	_userText ctrlSetText format["Users:"];
-	_damageText ctrlSetText format["Damage:"];
+	_weaponText ctrlSetText format["Armas:"];
+	_speedText ctrlSetText format["Velocidad:"];
+	_userText ctrlSetText format["Usuarios:"];
+	_damageText ctrlSetText format["Daño:"];
 
 	switch (_switch) do
 	{
@@ -62,7 +62,7 @@ if (_uid call isAdmin) then
 
 				if (_vehicleClass != "") then
 				{
-					_index = _vehicleListBox lbAdd format ["[Class: %1] [Type: %2]", _vehicleClass, _vehicleType];
+					_index = _vehicleListBox lbAdd format ["[Clase: %1] [Type: %2]", _vehicleClass, _vehicleType];
 					_vehicleListBox lbSetData [_index, str _x];
 				};
 
@@ -75,7 +75,7 @@ if (_uid call isAdmin) then
 
 				if (_vehicleType isKindOf "Helicopter") then
 				{
-					_index = _vehicleListBox lbAdd format ["[Class: Helicopter] [Type: %1]", _vehicleType];
+					_index = _vehicleListBox lbAdd format ["[Clase: Helicóptero] [Tipo: %1]", _vehicleType];
 					_vehicleListBox lbSetData [_index, str _x];
 				};
 
@@ -88,7 +88,7 @@ if (_uid call isAdmin) then
 
 				if (_vehicleType isKindOf "Plane") then
 				{
-					_index = _vehicleListBox lbAdd format ["[Class: Plane] [Type: %1]", _vehicleType];
+					_index = _vehicleListBox lbAdd format ["[Clase: Avión] [Tipo: %1]", _vehicleType];
 					_vehicleListBox lbSetData [_index, str _x];
 				};
 
@@ -112,7 +112,7 @@ if (_uid call isAdmin) then
 
 				if (_vehicleClass != "") then
 				{
-					_index = _vehicleListBox lbAdd format ["[Class: %1] [Type: %2]", _vehicleClass, _vehicleType];
+					_index = _vehicleListBox lbAdd format ["[Clase: %1] [Tipo: %2]", _vehicleClass, _vehicleType];
 					_vehicleListBox lbSetData [_index, str _x];
 				};
 
@@ -137,11 +137,11 @@ if (_uid call isAdmin) then
 				{
 					if (_hackedVehicle isKindOf "ReammoBox_F") then
 					{
-						_ownerInfo = format ["[Owner: %1]", _vehicleOwner];
+						_ownerInfo = format ["[Dueño: %1]", _vehicleOwner];
 					}
 					else
 					{
-						_ownerInfo = format ["[Last driver: %1]", _vehicleOwner];
+						_ownerInfo = format ["[Último conductor %1]", _vehicleOwner];
 					};
 				};
 
@@ -180,7 +180,7 @@ if (_uid call isAdmin) then
 
 				if (_vehicleClass != "") then
 				{
-					_index = _vehicleListBox lbAdd format ["[Class: %1] [Type: %2] %3", _vehicleClass, _vehicleType, _ownerInfo];
+					_index = _vehicleListBox lbAdd format ["[Clase: %1] [Tipo: %2] %3", _vehicleClass, _vehicleType, _ownerInfo];
 					_vehicleListBox lbSetData [_index, str _hackedVehicle];
 				};
 
