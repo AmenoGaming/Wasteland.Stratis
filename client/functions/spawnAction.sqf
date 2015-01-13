@@ -70,7 +70,7 @@ _header = _dialog displayCtrl respawn_Content_Text;
 
 if (cbChecked (_dialog displayCtrl respawn_Preload_Checkbox)) then
 {
-	_header ctrlSetStructuredText parseText "<t size='0.5'> <br/></t><t size='1.33'>Preloading spawn...</t>";
+	_header ctrlSetStructuredText parseText "<t size='0.5'> <br/></t><t size='1.33'>Precargando spawn...</t>";
 };
 
 if (typeName spawnActionHandle == "SCRIPT") then
@@ -82,7 +82,7 @@ if (typeName spawnActionHandle == "SCRIPT") then
 
 //if (!isNull _ctrlButton) then
 //{
-	_header ctrlSetStructuredText parseText "It appears there was an error,<br/>please try again.";
+	_header ctrlSetStructuredText parseText "Parece que ha habido un error,<br/>Prueba de nuevo.";
 	{
 		(_dialog displayCtrl _x) ctrlEnable true;
 	} forEach [respawn_Random_Button, respawn_Spawn_Button, respawn_Locations_Type, respawn_Locations_List, respawn_Preload_Checkbox];
