@@ -45,6 +45,6 @@ _success = [DURATION, ANIMATION, _checks, []] call a3w_actions_start;
 
 if (_success) then {
 	player setDamage 0;
-	["First Aid Completed!", 5] call mf_notify_client;
+	["Primeros Auxilios Completado!", 5] call mf_notify_client;
 };
 _success;
