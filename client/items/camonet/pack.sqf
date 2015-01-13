@@ -34,7 +34,7 @@ _hasFailed = {
 		case (player distance _netting > 5): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED};
 		default {
-			_text = format["Camouflage Netting %1%2 Packed", round(_progress*100), "%"];
+			_text = format["Red de camuflaje %1%2 recogida", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
