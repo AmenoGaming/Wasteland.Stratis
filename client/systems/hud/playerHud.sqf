@@ -60,23 +60,23 @@ _displayTerritoryActivity =
 				_territoryCaptureCountdown = (_territoryCaptureCountdown - _seconds) / 60;
 				_minutes = _territoryCaptureCountdown % 60;
 
-				_territoryActionText = format["Capturing territory in about <t font='%1'>%2 minutes</t>", _boldFont, _minutes + 1];
+				_territoryActionText = format["Capturando territorio en unos <t font='%1'>%2 minutos</t>", _boldFont, _minutes + 1];
 			}
 			else
 			{
 				if (_territoryCaptureCountdown < 5) then
 				{
-					_territoryActionText = "Territory transition in progress...";
+					_territoryActionText = "Transicción de territorio en marcha...";
 				}
 				else
 				{
-					_territoryActionText = format["Capturing territory in <t font='%1'>%2 seconds</t>", _boldFont, _territoryCaptureCountdown];
+					_territoryActionText = format["Capturando territorio en  <t font='%1'>%2 segundos</t>", _boldFont, _territoryCaptureCountdown];
 				};
 			};
 		};
-		case "BLOCKEDATTACKER": { _territoryActionText = "Territory capture blocked" };
-		case "BLOCKEDDEFENDER": { _territoryActionText = "Territory under attack" };
-		case "RESET":           { _territoryActionText = "Territory capture started" };
+		case "BLOCKEDATTACKER": { _territoryActionText = "Captura de territorio bloqueada" };
+		case "BLOCKEDDEFENDER": { _territoryActionText = "Territorio bajo ataque enemigo" };
+		case "RESET":           { _territoryActionText = "Captura de territorio comenzada" };
 	};
 
 	_activityMessage = format ["Location: <t font='%1'>%2</t><br/>%3", _boldFont, _descriptiveName, _territoryActionText];
