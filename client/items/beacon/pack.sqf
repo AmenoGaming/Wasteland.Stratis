@@ -10,9 +10,9 @@
 
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define DURATION MF_ITEMS_SPAWN_BEACON_DURATION
-#define ERR_CANCELLED "Packing Spawn Beacon Cancelled"
-#define ERR_TOO_FAR_AWAY "Packing Spawn Beacon Failed! You moved too far away from the beacon"
-#define ERR_SOMEONE_ELSE_TAKEN "Packing Spawn Beacon Failed! Someone else finished packing it up before you"
+#define ERR_CANCELLED "Recogida del Spawn Beacon cancelada"
+#define ERR_TOO_FAR_AWAY "Recogida del  Spawn Beacon fallida! Estás demasiado lejos"
+#define ERR_SOMEONE_ELSE_TAKEN "Recogida del  Spawn Beacon fallida! Alguien se te ha adelantado"
 
 private ["_beacon", "_error", "_hasFailed", "_success"];
 _beacon = [] call mf_items_spawn_beacon_nearest;
@@ -32,7 +32,7 @@ _hasFailed = {
 		case (player distance _beacon > 5): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED};
 		default {
-			_text = format["Spawn Beacon is %1%2 Packed", round(_progress*100), "%"];
+			_text = format["El Spawn Beacon ha sido %1%2 recogido", round(_progress*100), "%"];
 			_failed = false;
 		};
 	};
