@@ -45,7 +45,7 @@ storeSellingHandle = _this spawn
 		if (!_forceSell) then
 		{
 			playSound "FD_CP_Not_Clear_F";
-			[format ['"%1" does not contain valid items to sell.', _objName], "Error"] call BIS_fnc_guiMessage;
+			[format ['"%1" no contiene objetos válidos para la venta.', _objName], "Error"] call BIS_fnc_guiMessage;
 		};
 	};
 
@@ -65,13 +65,13 @@ storeSellingHandle = _this spawn
 		clearItemCargoGlobal _crate;
 
 		player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + _sellValue, true];
-		hint format [format ['The inventory of "%1" was sold for $%2', _objName, _sellValue]];
+		hint format [format ['El inventario de "%1" ha sido vendido por $%2', _objName, _sellValue]];
 		playSound "FD_Finish_F";
 	}
 	else
 	{
 		// Add total sell value to confirm message
-		_confirmMsg = format ["You will obtain $%1 for:<br/>", [_sellValue] call fn_numbersText];
+		_confirmMsg = format ["Obtendrás $%1 por:<br/>", [_sellValue] call fn_numbersText];
 
 		// Add item quantities and names to confirm message
 		{
@@ -125,7 +125,7 @@ storeSellingHandle = _this spawn
 			else
 			{
 				playSound "FD_CP_Not_Clear_F";
-				[format ['The contents of "%1" have changed, please restart the selling process.', _objName], "Error"] call BIS_fnc_guiMessage;
+				[format ['El contenido de "%1" ha cambiado. por favor, vuelve a empezar el proceso de venta.', _objName], "Error"] call BIS_fnc_guiMessage;
 			};
 		};
 	};
