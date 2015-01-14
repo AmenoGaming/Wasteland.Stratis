@@ -107,7 +107,7 @@ else
 
 		_damage = 0.5;
 
-		diag_log format ["INCAPACITATED by [%1] with [%2]", _source, _ammo];
+		diag_log format ["Incapacitado por [%1] con [%2]", _source, _ammo];
 	};
 };
 
