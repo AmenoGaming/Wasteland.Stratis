@@ -36,14 +36,14 @@ switch (_lockState) do
 			switch (true) do
 			{
 				case (!alive player): { _text = "" };
-				case (doCancelAction): { doCancelAction = false; _text = "Locking cancelled" };
-				case (vehicle player != player): { _text = "Action failed! You can't do this in a vehicle" };
-				case (!isNull (_object getVariable ["R3F_LOG_est_transporte_par", objNull])): { _text = "Action failed! Somebody moved the object" };
-				case (_object getVariable ["objectLocked", false]): { _text = "Somebody else locked it before you" };
+				case (doCancelAction): { doCancelAction = false; _text = "Cerrar cancelado" };
+				case (vehicle player != player): { _text = "Fallo! No puedes hacerlo desde un vehiculo" };
+				case (!isNull (_object getVariable ["R3F_LOG_est_transporte_par", objNull])): { _text = "Fallo! Alguien ha movido el objeto" };
+				case (_object getVariable ["objectLocked", false]): { _text = "Fallo! Alguien se te ha adelantado" };
 				default
 				{
 					_failed = false;
-					_text = format ["Locking %1%2 complete", floor (_progress * 100), "%"];
+					_text = format ["Cerrar %1%2 completado", floor (_progress * 100), "%"];
 				};
 			};
 
@@ -69,7 +69,7 @@ switch (_lockState) do
 			// If the player is too far or dies, revert state.
 			if (player distance _object > 14 || !alive player) exitWith
 			{
-		        2 cutText ["Object lock interrupted...", "PLAIN DOWN", 1];
+		        2 cutText ["Cerrar objeto interrumpido...", "PLAIN DOWN", 1];
 				R3F_LOG_mutex_local_verrou = false;
 			};
 
@@ -81,7 +81,7 @@ switch (_lockState) do
 			_lockDuration = _lockDuration - 1;
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
 
-			2 cutText [format["Object lock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			2 cutText [format["Cerrar objeto %1%2 completado", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
 		    sleep 1;
 
 			// Sleep a little extra to show that lock has completed.
@@ -114,14 +114,14 @@ switch (_lockState) do
 			switch (true) do
 			{
 				case (!alive player): {};
-				case (doCancelAction): { doCancelAction = false; _text = "Unlocking cancelled" };
-				case (vehicle player != player): { _text = "Action failed! You can't do this in a vehicle" };
-				case (!isNull (_object getVariable ["R3F_LOG_est_transporte_par", objNull])): { _text = "Action failed! Somebody moved the object" };
-				case !(_object getVariable ["objectLocked", false]): { _text = "Somebody else unlocked it before you" };
+				case (doCancelAction): { doCancelAction = false; _text = "Desbloquear cancelado" };
+				case (vehicle player != player): { _text = "Fallo! No puedes hacerlo desde un vehiculo"};
+				case (!isNull (_object getVariable ["R3F_LOG_est_transporte_par", objNull])): { _text = "Action failed! Alguien ha movido el objeto" };
+				case !(_object getVariable ["objectLocked", false]): { _text = "Fallo! Alguien se te ha adelantado" };
 				default
 				{
 					_failed = false;
-					_text = format ["Unlocking %1%2 complete", floor (_progress * 100), "%"];
+					_text = format ["Desbloquear %1%2 completado", floor (_progress * 100), "%"];
 				};
 			};
 
@@ -147,7 +147,7 @@ switch (_lockState) do
 			// If the player is too far or dies, revert state.
 			if (player distance _object > 5 || !alive player) exitWith
 			{
-		        2 cutText ["Object unlock interrupted...", "PLAIN DOWN", 1];
+		        2 cutText ["Desbloquear objeto interrumpido...", "PLAIN DOWN", 1];
 				R3F_LOG_mutex_local_verrou = false;
 			};
 
@@ -159,7 +159,7 @@ switch (_lockState) do
 			_unlockDuration = _unlockDuration - 1;
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
 
-			2 cutText [format["Object unlock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			2 cutText [format["Desbloquear objeto %1%2 completado", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
 		    sleep 1;
 
 			// Sleep a little extra to show that lock has completed
