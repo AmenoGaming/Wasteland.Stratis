@@ -293,7 +293,7 @@ FAR_CheckFriendlies =
 	private ["_units", "_msg", "_medics", "_medicsText", "_dir", "_cardinal"];
 
 	_units = player nearEntities ["AllVehicles", 1000];
-	_msg = "<t underline='true'>Nearby medics</t>"; // Non-breaking space (Alt+255) between "nearby" and "medics", otherwise the underline is split between the 2 words
+	_msg = "<t underline='true'>Médicos cerca</t>"; // Non-breaking space (Alt+255) between "nearby" and "medics", otherwise the underline is split between the 2 words
 	_medics = [];
 	_medicsText = "";
 
