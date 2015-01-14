@@ -12,12 +12,12 @@
 // Check if mutex lock is active.
 if (mutexScriptInProgress) exitWith
 {
-	player globalChat "You are already performing another action.";
+	player globalChat "Ya estás realizando otra acción.";
 };
 
 if (vehicle player != player) exitWith
 {
-	titleText ["You can't pick up money while in a vehicle", "PLAIN DOWN", 0.5];
+	titleText ["No puedes coger dinero desde dentro de un vehículo.", "PLAIN DOWN", 0.5];
 };
 
 mutexScriptInProgress = true;
@@ -33,7 +33,7 @@ if (count _moneyObjects > 0) then
 
 if (isNil "_moneyObj" || {player distance _moneyObj > PICK_DISTANCE}) exitWith
 {
-	titleText ["You are too far to pick the money up.", "PLAIN DOWN", 0.5];
+	titleText ["Estás demasiado lejos del dinero.", "PLAIN DOWN", 0.5];
 	mutexScriptInProgress = false;
 };
 
