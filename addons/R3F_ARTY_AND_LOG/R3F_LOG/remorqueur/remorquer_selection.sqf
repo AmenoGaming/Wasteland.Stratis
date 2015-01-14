@@ -139,7 +139,7 @@ else
 					player switchMove "";
 				}
 				else {
-					player globalChat "You can't tow more than one vehicle.";
+					player globalChat "No puedes enganchar más de un vehículo.";
 				};
 			}
 			else
