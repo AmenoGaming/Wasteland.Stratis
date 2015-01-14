@@ -16,7 +16,7 @@ else
 			{if(side _x ==  ((_this select 0) getVariable "R3F_Side") && alive _x && _x distance (_this select 0) < 150) exitwith {_tempVar = true;};} foreach AllUnits;
 		};
 	};
-	if(_tempVar) exitwith {hint format["This object belongs to %1 and they're nearby you cannot take this.", (_this select 0) getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;};
+	if(_tempVar) exitwith {hint format["Este objeto pertenece a %1 y esta en los alrededores, no puedes usarlo.", (_this select 0) getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;};
 
 	R3F_LOG_mutex_local_verrou = true;
 
